@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- The ActionBar -->
+    <include
+        layout="@layout/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:orientation="horizontal"
+        android:layout_margin="0dp"
+        android:background="@color/primary">
+
+        <ImageView
+            android:id="@+id/politician_info_photo"
+            android:layout_width="165dp"
+            android:layout_height="220dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:padding="4dp"
+            android:src="@drawable/shadow_man"
+            android:scaleType="fitCenter"
+            android:clickable="true"
+            android:onClick="onShowPoliticianPhoto"
+            android:background="@drawable/politician_photo_border"/>
+    </RelativeLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:columnCount="2"
+        android:stretchColumns="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Nome:"/>
+
+            <TextView
+                android:id="@+id/politician_info_name" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:text="Partido:"/>
+
+            <TextView
+                android:id="@+id/politician_info_party"
+                android:text="XPTO"/>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>

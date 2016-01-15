@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Memória Política</string>
+
+    <string name="drawer_header_title">Opções</string>
+    <string name="action_settings">Configurações</string>
+    <string name="action_search_politician">Buscar político</string>
+    <string name="search_hint">Buscar políticos e partidos</string>
+    <string name="action_federal_deputies">Deputados federais</string>
+    <string name="action_senators">Senadores</string>
+
+</resources>

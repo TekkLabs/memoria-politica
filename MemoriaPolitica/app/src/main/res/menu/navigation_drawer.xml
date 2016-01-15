@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".NavigationDrawerActivity">
+
+    <item
+        android:id="@+id/action_federal_deputies"
+        android:title="@string/action_federal_deputies"
+        app:showAsAction="withText|ifRoom" />
+
+    <item
+        android:id="@+id/action_senators"
+        android:title="@string/action_senators"
+        app:showAsAction="withText|ifRoom" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="withText|ifRoom" />
+</menu>
