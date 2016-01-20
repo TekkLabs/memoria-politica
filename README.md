@@ -10,3 +10,5 @@ Além disso o aplicativo permite que os eleitores marquem os políticos que eles
 
 ##### Como contribuir
 Qualquer pessoa pode contribuir com o projeto, só é preciso seguir alguns passos básicos descritos no arquivo CONTRIBUTING no diretório raiz do repositório.
+
+##### Para dúvidas, críticas ou sugestões entre em contato através da maillist: memoria-politica@googlegroups.com
