@@ -13,3 +13,4 @@ Você pode contribuir de várias formas:
   Outro desafio é transformar todos esses dados em formatos simples para o app Memória Política poder receber como atualizacões na sua base de dados.
 
 #### Para mais informações sobre as melhorias e novas funcionalidades do projeto, leia o nosso Roadmap na Wiki.
+#### Qualquer dúvida ou sugestão entre em contato pela maillist: memoria-politica@googlegroups.com
