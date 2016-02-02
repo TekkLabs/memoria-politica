@@ -32,31 +32,59 @@
             android:background="@drawable/politician_photo_border"/>
     </RelativeLayout>
 
-    <TableLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:columnCount="2"
-        android:stretchColumns="1">
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/name_tuple">
 
             <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/pol_name"
                 android:text="Nome:"/>
 
             <TextView
-                android:id="@+id/politician_info_name" />
-        </TableRow>
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/pol_name"
+                android:id="@+id/politician_info_name"
+                android:text="NOME"/>
+        </RelativeLayout>
 
-        <TableRow>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name_tuple">
+
             <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/party_name"
                 android:text="Partido:"/>
 
             <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/party_name"
                 android:id="@+id/politician_info_party"
                 android:text="XPTO"/>
-        </TableRow>
-    </TableLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Motivo:" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:singleLine="false"
+        android:id="@+id/approval_reason"/>
+
 </LinearLayout>

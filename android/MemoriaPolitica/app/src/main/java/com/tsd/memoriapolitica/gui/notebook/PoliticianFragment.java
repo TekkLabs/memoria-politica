@@ -13,25 +13,19 @@ import android.widget.ListAdapter;
 import android.widget.TextView;
 
 import com.tsd.memoriapolitica.R;
+import com.tsd.memoriapolitica.domain.CitizenNotebook;
 import com.tsd.memoriapolitica.domain.Politician;
 import com.tsd.memoriapolitica.domain.PoliticianClass;
+import com.tsd.memoriapolitica.domain.PoliticianClassification;
 import com.tsd.memoriapolitica.gui.MainActivity;
 import com.tsd.memoriapolitica.gui.PoliticianThumbnailAdapter;
+import com.tsd.memoriapolitica.gui.Presenter;
 import com.tsd.memoriapolitica.gui.Searchable;
 
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * A fragment representing a list of Items.
- * <p/>
- * Large screen devices (such as tablets) are supported by replacing the ListView
- * with a GridView.
- * <p/>
- * Activities containing this fragment MUST implement the {@link OnPoliticianFragmentInteractionListener}
- * interface.
- */
 public abstract class PoliticianFragment extends Fragment implements AbsListView.OnItemClickListener, Searchable {
 
     /**
@@ -132,11 +126,11 @@ public abstract class PoliticianFragment extends Fragment implements AbsListView
     public void doSearch(String query) {
         String[] terms = query.split(" ");
 
-        Iterator<Politician> it = mAdapter.getPoliticians().iterator();
+        Iterator<PoliticianClassification> it = mAdapter.getPoliticians().iterator();
         while (it.hasNext()) {
-            Politician pol = it.next();
+            PoliticianClassification pol = it.next();
             for (String term : terms) {
-                if (!pol.matchesQueryTerm(term)) {
+                if (!pol.getPolitician().matchesQueryTerm(term)) {
                     it.remove();
                     mAdapter.removeItem(pol);
                 }
@@ -156,19 +150,9 @@ public abstract class PoliticianFragment extends Fragment implements AbsListView
 
     public abstract void refresh();
 
-
-    /**
-     * This interface must be implemented by activities that contain this
-     * fragment to allow an interaction in this fragment to be communicated
-     * to the activity and potentially other fragments contained in that
-     * activity.
-     * <p/>
-     * See the Android Training lesson <a href=
-     * "http://developer.android.com/training/basics/fragments/communicating.html"
-     * >Communicating with Other Fragments</a> for more information.
-     */
-    public interface OnPoliticianFragmentInteractionListener {
-        // TODO: Update argument type and name
-        public void onPoliticianFragmentInteraction(Politician politician);
+    public void onDialogPositiveClick(PoliticianClassification polClassification) {
+        Presenter presenter = ((MainActivity)getActivity()).getPresenter();
+        CitizenNotebook notebook = presenter.getCurrentNotebook();
+        notebook.addApprovedPolitician(PoliticianClass.FED_DEP, polClassification);
     }
 }

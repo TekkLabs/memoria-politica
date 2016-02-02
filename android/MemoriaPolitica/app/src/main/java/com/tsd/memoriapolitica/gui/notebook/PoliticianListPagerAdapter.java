@@ -1,14 +1,18 @@
 package com.tsd.memoriapolitica.gui.notebook;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.tsd.memoriapolitica.db.DaoFactory;
 import com.tsd.memoriapolitica.domain.CitizenNotebook;
 import com.tsd.memoriapolitica.domain.Constants;
 import com.tsd.memoriapolitica.domain.Politician;
 import com.tsd.memoriapolitica.domain.PoliticianClass;
+import com.tsd.memoriapolitica.domain.PoliticianClassification;
+import com.tsd.memoriapolitica.gui.Presenter;
 
 /**
  * Created by PC on 16/07/2015.
@@ -19,24 +23,18 @@ public class PoliticianListPagerAdapter extends FragmentPagerAdapter {
     public static final int NEUTRAL_ITEM = 1;
     public static final int REPROVED_ITEM = 2;
 
-    private CitizenNotebook notebook;
-    private PoliticianClass politicianClass;
-
     private PoliticianFragment approvedPolFrag;
     private PoliticianFragment reprovedPolFrag;
     private PoliticianFragment neutralPolFrag;
 
 
-    public PoliticianListPagerAdapter(CitizenNotebook theNotebook, FragmentManager fragmentManager) {
+    public PoliticianListPagerAdapter(FragmentManager fragmentManager) {
         super(fragmentManager);
-        this.notebook = theNotebook;
     }
 
     public void setPoliticianClass(PoliticianClass polClass) {
-        this.politicianClass = polClass;
         Bundle bundle = new Bundle();
         bundle.putSerializable(Constants.POLITICIAN_CLASS, polClass);
-        bundle.putSerializable(Constants.NOTEBOOK_OBJ, notebook);
 
         approvedPolFrag = ApprovedPoliticiansFragment.newInstance(bundle);
         reprovedPolFrag = ReprovedPoliticiansFragment.newInstance(bundle);
@@ -72,5 +70,18 @@ public class PoliticianListPagerAdapter extends FragmentPagerAdapter {
         approvedPolFrag.refresh();
         reprovedPolFrag.refresh();
         neutralPolFrag.refresh();
+    }
+
+    public void onDialogPositiveClick(PoliticianClassification polClassification) {
+        if (approvedPolFrag.isResumed()) {
+            approvedPolFrag.onDialogPositiveClick(polClassification);
+        }
+        else if (neutralPolFrag.isResumed()) {
+            neutralPolFrag.onDialogPositiveClick(polClassification);
+        }
+        else if (reprovedPolFrag.isResumed()) {
+            reprovedPolFrag.onDialogPositiveClick(polClassification);
+        }
+        notifyFragments();
     }
 }

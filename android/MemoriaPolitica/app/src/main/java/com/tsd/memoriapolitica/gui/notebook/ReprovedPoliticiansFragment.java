@@ -9,6 +9,7 @@ import com.tsd.memoriapolitica.domain.CitizenNotebook;
 import com.tsd.memoriapolitica.domain.Constants;
 import com.tsd.memoriapolitica.domain.Politician;
 import com.tsd.memoriapolitica.domain.PoliticianClass;
+import com.tsd.memoriapolitica.domain.PoliticianClassification;
 import com.tsd.memoriapolitica.gui.MainActivity;
 import com.tsd.memoriapolitica.gui.PoliticianThumbnailAdapter;
 
@@ -36,10 +37,7 @@ public class ReprovedPoliticiansFragment extends PoliticianFragment {
 
         Bundle bundle = getArguments();
         PoliticianClass polClass = (PoliticianClass) bundle.getSerializable(Constants.POLITICIAN_CLASS);
-        CitizenNotebook notebook = (CitizenNotebook) bundle.getSerializable(Constants.NOTEBOOK_OBJ);
-
-        Set<Politician> politicians = notebook.getReprovedPoliticians(polClass);
-        mAdapter = new PoliticianThumbnailAdapter((MainActivity) getActivity(), politicians, Approval.REPROVED);
+        mAdapter = new PoliticianThumbnailAdapter((MainActivity) getActivity(), Approval.REPROVED);
     }
 
     @Override

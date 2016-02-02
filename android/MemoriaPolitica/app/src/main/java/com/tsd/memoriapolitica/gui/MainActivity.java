@@ -1,14 +1,12 @@
 package com.tsd.memoriapolitica.gui;
 
 import android.app.SearchManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -22,14 +20,17 @@ import android.view.MenuItem;
 import com.tsd.memoriapolitica.R;
 import com.tsd.memoriapolitica.db.DaoFactory;
 import com.tsd.memoriapolitica.domain.CitizenNotebook;
-import com.tsd.memoriapolitica.domain.Constants;
 import com.tsd.memoriapolitica.domain.Politician;
 import com.tsd.memoriapolitica.domain.PoliticianClass;
+import com.tsd.memoriapolitica.domain.PoliticianClassification;
 import com.tsd.memoriapolitica.gui.notebook.PoliticianFragment;
 import com.tsd.memoriapolitica.gui.notebook.PoliticianListPagerAdapter;
 
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+
+public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener,
+                                                        ApprovalDescDialogFragment.NotifyDialogFragmentClicked {
 
     /**
      * Toolbar replacing the default ActionBar.
@@ -52,12 +53,11 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     ActionBarDrawerToggle drawerToggle;
 
     private Searchable mSearchableFragment;
-    private PoliticianFragment searchableFragment;
     private ViewPager pager;
     private PoliticianListPagerAdapter mPagerAdapter;
 
-    private CitizenNotebook mNotebook;
     private PoliticianClass currentPolClass;
+    private Presenter presenter;
 
 
     @Override
@@ -65,14 +65,15 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_drawer);
 
+        presenter = new Presenter(this);
+        //notebook = presenter.getCurrentNotebook();
+
         // Set a Toolbar to replace the ActionBar.
         mToolbar = (Toolbar) findViewById(R.id.mainToolbar);
         setSupportActionBar(mToolbar);
 
         pager = (ViewPager) findViewById(R.id.mainViewPager);
-        mNotebook = DaoFactory.getNotebookDao(this).getNotebook();
-        mPagerAdapter = new PoliticianListPagerAdapter(mNotebook, getSupportFragmentManager());
-
+        mPagerAdapter = new PoliticianListPagerAdapter(getSupportFragmentManager());
         currentPolClass = PoliticianClass.FED_DEP;
         mPagerAdapter.setPoliticianClass(currentPolClass);
         pager.setAdapter(mPagerAdapter);
@@ -98,13 +99,13 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     private void setupDrawerContent(NavigationView navigationView) {
         navigationView.setNavigationItemSelectedListener(
-            new NavigationView.OnNavigationItemSelectedListener() {
-                @Override
-                public boolean onNavigationItemSelected(MenuItem menuItem) {
-                    selectDrawerItem(menuItem);
-                    return true;
-                }
-            });
+                new NavigationView.OnNavigationItemSelectedListener() {
+                    @Override
+                    public boolean onNavigationItemSelected(MenuItem menuItem) {
+                        selectDrawerItem(menuItem);
+                        return true;
+                    }
+                });
     }
 
     private ActionBarDrawerToggle setupDrawerToggle() {
@@ -204,21 +205,16 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         return mSearchableFragment.onQueryTextChange(newText);
     }
 
-    public void setPoliticianApproved(Politician pol) {
-        mNotebook.addApprovedPolitician(currentPolClass, pol);
-        mPagerAdapter.notifyFragments();
-        DaoFactory.getNotebookDao(this).saveNotebook(mNotebook);
+    public Presenter getPresenter() {
+        return presenter;
     }
 
-    public void setPoliticianReproved(Politician pol) {
-        mNotebook.addReprovedPolitician(currentPolClass, pol);
+    public void fragmentChanged() {
         mPagerAdapter.notifyFragments();
-        DaoFactory.getNotebookDao(this).saveNotebook(mNotebook);
     }
 
-    public void setPoliticianNeutral(Politician pol) {
-        mNotebook.addNeutralPolitician(currentPolClass, pol);
-        mPagerAdapter.notifyFragments();
-        DaoFactory.getNotebookDao(this).saveNotebook(mNotebook);
+    @Override
+    public void onDialogPositiveClick(PoliticianClassification polClassification) {
+        mPagerAdapter.onDialogPositiveClick(polClassification);
     }
 }

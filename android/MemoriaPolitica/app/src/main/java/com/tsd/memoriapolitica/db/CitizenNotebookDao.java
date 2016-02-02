@@ -5,6 +5,8 @@ import android.content.Context;
 import com.tsd.memoriapolitica.domain.CitizenNotebook;
 import com.tsd.memoriapolitica.domain.Politician;
 import com.tsd.memoriapolitica.domain.PoliticianClass;
+import com.tsd.memoriapolitica.domain.PoliticianClassification;
+import com.tsd.memoriapolitica.gui.notebook.Approval;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,19 +21,22 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created by PC on 17/07/2015.
  */
 public class CitizenNotebookDao extends Dao {
 
-    private static final String CPF_KEY = "cpf";
+    private static final String APPROVED_KEY = "approved";
+    private static final String REPROVED_KEY = "reproved";
 
-    private FedDepDao politicianDao;
+    private PoliticianClassificationDao polClassificationDao;
 
-    public CitizenNotebookDao(Context aContext, FedDepDao thePoliticianDao) {
+    public CitizenNotebookDao(Context aContext,
+                              PoliticianClassificationDao theClassificationDao) {
         super(aContext);
-        this.politicianDao = thePoliticianDao;
+        this.polClassificationDao = theClassificationDao;
     }
 
     public CitizenNotebook getNotebook() {
@@ -40,7 +45,7 @@ public class CitizenNotebookDao extends Dao {
 
     private CitizenNotebook readNotebook() {
         CitizenNotebook notebook = new CitizenNotebook();
-        notebook.addNeutralPoliticians(PoliticianClass.FED_DEP, politicianDao.getAll());
+        notebook.addNeutralPoliticians(PoliticianClass.FED_DEP, polClassificationDao.getAllNeutral());
 
         try {
             FileInputStream inputStream = getContext().openFileInput("notebook.json");
@@ -51,13 +56,7 @@ public class CitizenNotebookDao extends Dao {
             String jsonFileContent = new String(reducedBuffer);
 
             JSONObject jNotebook = new JSONObject(jsonFileContent);
-            JSONArray jApproved = jNotebook.getJSONArray("approved");
-            JSONArray jReproved = jNotebook.getJSONArray("reproved");
-            List<Politician> approvedList = createPoliticianFrom(jApproved);
-            List<Politician> reprovedList = createPoliticianFrom(jReproved);
-
-            notebook.addApprovedPoliticians(PoliticianClass.FED_DEP, approvedList);
-            notebook.addReprovedPoliticians(PoliticianClass.FED_DEP, reprovedList);
+            fillNotebook(notebook, jNotebook);
         }
         catch (JSONException e) {
             e.printStackTrace();
@@ -69,19 +68,15 @@ public class CitizenNotebookDao extends Dao {
         return notebook;
     }
 
-    private List<Politician> createPoliticianFrom(JSONArray jArray) throws JSONException, IOException {
-        List<Politician> politicians = new ArrayList<>();
+    private void fillNotebook(CitizenNotebook notebook, JSONObject jNotebook) throws JSONException {
+        JSONArray approvedJArray = jNotebook.getJSONArray(APPROVED_KEY);
+        List<PoliticianClassification> approvedList = polClassificationDao.getClassificationsFrom(approvedJArray, Approval.APPROVED);
 
-        for (int i = 0; i < jArray.length(); i++)
-        {
-            JSONObject jsonPol = jArray.getJSONObject(i);
-            String cpf = jsonPol.getString(CPF_KEY);
+        JSONArray reprovedJArray = jNotebook.getJSONArray(REPROVED_KEY);
+        List<PoliticianClassification> reprovedList = polClassificationDao.getClassificationsFrom(reprovedJArray, Approval.REPROVED);
 
-            Politician pol = politicianDao.getByCpf(cpf);
-            politicians.add(pol);
-        }
-
-        return politicians;
+        notebook.addApprovedPoliticians(PoliticianClass.FED_DEP, approvedList);
+        notebook.addReprovedPoliticians(PoliticianClass.FED_DEP, reprovedList);
     }
 
     public void saveNotebook(CitizenNotebook notebook) {
@@ -113,30 +108,14 @@ public class CitizenNotebookDao extends Dao {
     private JSONObject createJsonFrom(CitizenNotebook notebook) throws JSONException {
         JSONObject jNotebook = new JSONObject();
 
-        Collection<Politician> approvedPols = notebook.getApprovedPoliticians(PoliticianClass.FED_DEP);
-        JSONArray jApprovedArray = createJsonFrom(approvedPols);
-        jNotebook.put("approved", jApprovedArray);
+        Set<PoliticianClassification> approvedList = notebook.getApprovedPoliticians(PoliticianClass.FED_DEP);
+        JSONArray jApprovedArray = polClassificationDao.createJsonArrayFrom(approvedList);
+        jNotebook.put(APPROVED_KEY, jApprovedArray);
 
-        Collection<Politician> reprovedPols = notebook.getReprovedPoliticians(PoliticianClass.FED_DEP);
-        JSONArray jReprovedArray = createJsonFrom(reprovedPols);
-        jNotebook.put("reproved", jReprovedArray);
+        Set<PoliticianClassification> reprovedList = notebook.getReprovedPoliticians(PoliticianClass.FED_DEP);
+        JSONArray jReprovedArray = polClassificationDao.createJsonArrayFrom(reprovedList);
+        jNotebook.put(REPROVED_KEY, jReprovedArray);
 
         return jNotebook;
-    }
-
-    private JSONArray createJsonFrom(Collection<Politician> approvedPols) throws JSONException {
-        JSONArray jArray = new JSONArray();
-        for (Politician pol : approvedPols) {
-            JSONObject jPol = createJsonFrom(pol);
-            jArray.put(jPol);
-        }
-
-        return jArray;
-    }
-
-    private JSONObject createJsonFrom(Politician pol) throws JSONException {
-        JSONObject jObj = new JSONObject();
-        jObj.put(CPF_KEY, pol.getCpf());
-        return jObj;
     }
 }

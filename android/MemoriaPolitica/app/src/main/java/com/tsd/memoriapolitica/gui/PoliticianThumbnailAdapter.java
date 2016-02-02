@@ -1,20 +1,22 @@
 package com.tsd.memoriapolitica.gui;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
 import com.tsd.memoriapolitica.R;
+import com.tsd.memoriapolitica.domain.CitizenNotebook;
 import com.tsd.memoriapolitica.domain.Constants;
 import com.tsd.memoriapolitica.domain.Politician;
+import com.tsd.memoriapolitica.domain.PoliticianClass;
+import com.tsd.memoriapolitica.domain.PoliticianClassification;
 import com.tsd.memoriapolitica.gui.notebook.Approval;
-import com.tsd.memoriapolitica.util.StringUtil;
 import com.tsd.memoriapolitica.widget.radio.DeselectableRadioButton;
 
 import java.io.IOException;
@@ -40,45 +42,46 @@ public class PoliticianThumbnailAdapter extends BaseAdapter implements SectionIn
     }
 
     private MainActivity context;
-    private Set<Politician> politicians;
     private Approval approval;
+    private Presenter presenter;
+    private CitizenNotebook notebook;
 
     public PoliticianThumbnailAdapter(MainActivity theContext,
-                                      Set<Politician> somePoliticians,
                                       Approval theApproval) {
         this.context = theContext;
-        this.politicians = somePoliticians;
+        this.presenter = context.getPresenter();
+        this.notebook = this.presenter.getCurrentNotebook();
         this.approval = theApproval;
     }
 
-    public Collection<Politician> getPoliticians() {
+    public Collection<PoliticianClassification> getPoliticians() {
+        Collection<PoliticianClassification> politicians = notebook.getPoliticians(approval, PoliticianClass.FED_DEP);
         return Collections.unmodifiableCollection(politicians);
     }
 
     @Override
     public int getCount() {
-        return politicians.size();
+        return notebook.getPoliticians(approval, PoliticianClass.FED_DEP).size();
     }
 
     @Override
     public Object getItem(int position) {
-        Iterator<Politician> it = politicians.iterator();
-        for (int i = 0; i < position; i++) {
-            it.next();
-        }
-        return it.next();
+        Set<PoliticianClassification> politicians = notebook.getPoliticians(approval, PoliticianClass.FED_DEP);
+        return politicians.toArray(new PoliticianClassification[0])[position];
     }
 
     @Override
     public long getItemId(int position) {
-        Politician pol = (Politician) getItem(position);
-        return pol.getCpf().hashCode();
+        PoliticianClassification pol = (PoliticianClassification) getItem(position);
+        return pol.getPolitician().getCpf().hashCode();
     }
 
     /**
      * Removes an item from the adapter.
      */
-    public void removeItem(Politician politician) { politicians.remove(politician); }
+    public void removeItem(PoliticianClassification politician) {
+        //politicians.remove(politician);
+    }
 
     @Override
     public View getView(int position, final View convertView, ViewGroup parent) {
@@ -90,9 +93,10 @@ public class PoliticianThumbnailAdapter extends BaseAdapter implements SectionIn
             view = vi.inflate(R.layout.politician_thumbnail_layout, null);
         }
 
-        final Politician pol = (Politician) getItem(position);
+        final PoliticianClassification polClassification = (PoliticianClassification) getItem(position);
+        Politician pol = polClassification.getPolitician();
 
-        loadPhoto(pol, view);
+        loadPhoto(polClassification, view);
 
         TextView polName = (TextView) view.findViewById(R.id.politician_name);
         polName.setText(pol.getPoliticianName());
@@ -100,24 +104,30 @@ public class PoliticianThumbnailAdapter extends BaseAdapter implements SectionIn
         TextView partyView = (TextView) view.findViewById(R.id.party_name);
         partyView.setText(pol.getPartyName());
 
-        configureButtons(view, pol);
+        configureButtons(view, polClassification);
 
         return view;
     }
 
-    private void configureButtons(View view, final Politician pol) {
+    private void configureButtons(View view, final PoliticianClassification polClassification) {
         final DeselectableRadioButton btnLike = (DeselectableRadioButton) view.findViewById(R.id.btn_like);
         btnLike.setChecked(approval.equals(Approval.APPROVED));
 
         btnLike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ApprovalDescDialogFragment dlgFrag = new ApprovalDescDialogFragment();
+                Bundle bundle = new Bundle();
+                dlgFrag.setArguments(bundle);
+                bundle.putSerializable(Constants.POLITICIAN_KEY, polClassification);
+
                 if (btnLike.isChecked()) {
-                    context.setPoliticianApproved(pol);
+                    bundle.putSerializable(Constants.APPROVAL_KEY, Approval.APPROVED);
                 }
                 else {
-                    context.setPoliticianNeutral(pol);
+                    bundle.putSerializable(Constants.APPROVAL_KEY, Approval.NEUTRAL);
                 }
+                dlgFrag.show(context.getSupportFragmentManager(), "");
             }
         });
 
@@ -127,17 +137,23 @@ public class PoliticianThumbnailAdapter extends BaseAdapter implements SectionIn
         btnDislike.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                ApprovalDescDialogFragment dlgFrag = new ApprovalDescDialogFragment();
+                Bundle bundle = new Bundle();
+                dlgFrag.setArguments(bundle);
+                bundle.putSerializable(Constants.POLITICIAN_KEY, polClassification);
+
                 if (btnDislike.isChecked()) {
-                    context.setPoliticianReproved(pol);
+                    bundle.putSerializable(Constants.APPROVAL_KEY, Approval.REPROVED);
                 }
                 else {
-                    context.setPoliticianNeutral(pol);
+                    bundle.putSerializable(Constants.APPROVAL_KEY, Approval.NEUTRAL);
                 }
+                dlgFrag.show(context.getSupportFragmentManager(), "");
             }
         });
     }
 
-    private void loadPhoto(final Politician pol, View view) {
+    private void loadPhoto(final PoliticianClassification pol, View view) {
         ImageView photo = (ImageView) view.findViewById(R.id.politician_photo);
         photo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -150,7 +166,7 @@ public class PoliticianThumbnailAdapter extends BaseAdapter implements SectionIn
 
         // Loads image on UI thread. Can cause latency!
         try {
-            photo.setImageBitmap(pol.getPhoto(context));
+            photo.setImageBitmap(pol.getPolitician().getPhoto(context));
         }
         catch (IOException e) {
             photo.setImageResource(R.drawable.shadow_man);
@@ -170,9 +186,10 @@ public class PoliticianThumbnailAdapter extends BaseAdapter implements SectionIn
         }
 
         int index = 0;
-        for (Politician pol : politicians) {
+        Collection<PoliticianClassification> politicians = notebook.getPoliticians(approval, PoliticianClass.FED_DEP);
+        for (PoliticianClassification pol : politicians) {
             String sectionLetter = sections.get(sectionIndex);
-            String polLetter = pol.getPoliticianNameFirstLetter();
+            String polLetter = pol.getPolitician().getPoliticianNameFirstLetter();
             if (polLetter.compareTo(sectionLetter) >= 0) {
                 return index;
             }
@@ -185,10 +202,9 @@ public class PoliticianThumbnailAdapter extends BaseAdapter implements SectionIn
 
     @Override
     public int getSectionForPosition(int position) {
-        List<Politician> politicianList = new ArrayList<>();
-        politicianList.addAll(politicians);
-        Politician pol = politicianList.get(position);
-        String letter = pol.getPoliticianNameFirstLetter();
+        Set<PoliticianClassification> politicians = notebook.getPoliticians(approval, PoliticianClass.FED_DEP);
+        PoliticianClassification pol = politicians.toArray(new PoliticianClassification[0])[position];
+        String letter = pol.getPolitician().getPoliticianNameFirstLetter();
         return sections.indexOf(letter);
     }
 }

@@ -42,7 +42,7 @@ public class SenatorDao extends PoliticianDao {
             Politician politician = new Politician(cpf);
             politician.setPartyName(party);
 
-            politician.setPhotoPath("photos/senators/" + senatorName + ".jpg");
+            //politician.setPhotoPath("photos/senators/" + senatorName + ".jpg");
 
 
             politicians.add(politician);
