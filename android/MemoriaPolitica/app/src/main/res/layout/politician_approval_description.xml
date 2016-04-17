@@ -6,5 +6,6 @@
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
+        android:id="@+id/dlg_politician_approval_reason"
         android:singleLine="false" />
 </LinearLayout>

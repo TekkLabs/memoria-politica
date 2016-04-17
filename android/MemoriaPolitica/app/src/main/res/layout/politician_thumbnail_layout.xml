@@ -63,27 +63,27 @@
             android:layout_toLeftOf="@+id/like_radio_group"
             android:layout_marginRight="5dp" />
 
-        <com.tsd.memoriapolitica.widget.radio.DeselectableRadioGroup
+        <com.tekklabs.memoriapolitica.widget.radio.DeselectableRadioGroup
             android:id="@+id/like_radio_group"
             android:layout_width="72dp"
             android:layout_height="32dp"
             android:layout_alignParentRight="true"
             android:orientation="horizontal">
 
-            <com.tsd.memoriapolitica.widget.radio.DeselectableRadioButton
+            <com.tekklabs.memoriapolitica.widget.radio.DeselectableRadioButton
                 android:id="@+id/btn_like"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="5dp"
                 android:button="@drawable/selector_like_button" />
 
-            <com.tsd.memoriapolitica.widget.radio.DeselectableRadioButton
+            <com.tekklabs.memoriapolitica.widget.radio.DeselectableRadioButton
                 android:id="@+id/btn_dislike"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
                 android:button="@drawable/selector_dislike_button" />
-        </com.tsd.memoriapolitica.widget.radio.DeselectableRadioGroup>
+        </com.tekklabs.memoriapolitica.widget.radio.DeselectableRadioGroup>
     </RelativeLayout>
 </LinearLayout>

@@ -6,7 +6,7 @@
         android:id="@+id/action_federal_deputies"
         android:title="@string/action_federal_deputies"
         app:showAsAction="withText|ifRoom" />
-
+<!--
     <item
         android:id="@+id/action_senators"
         android:title="@string/action_senators"
@@ -16,4 +16,5 @@
         android:id="@+id/action_settings"
         android:title="@string/action_settings"
         app:showAsAction="withText|ifRoom" />
+-->
 </menu>
