@@ -1,6 +1,6 @@
 # CONTRIBUTING
 
-O projeto Memória Política ainda está dando os primeiros passos para a release 1.0.0 e ainda há muito o que fazer.
+O projeto Memória Política ainda está dando os primeiros passos para a release 1.1.0 e ainda há muito o que fazer.
 Você pode contribuir de várias formas:
 
 #### Código Java / Android
