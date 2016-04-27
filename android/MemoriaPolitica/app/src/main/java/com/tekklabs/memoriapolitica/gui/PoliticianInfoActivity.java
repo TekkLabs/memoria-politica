@@ -14,7 +14,7 @@ import com.tekklabs.memoriapolitica.domain.CitizenNotebook;
 import com.tekklabs.memoriapolitica.domain.Constants;
 import com.tekklabs.memoriapolitica.domain.Politician;
 import com.tekklabs.memoriapolitica.domain.PoliticianClassification;
-import com.tekklabs.memoriapolitica.gui.notebook.Approval;
+import com.tekklabs.memoriapolitica.domain.Approval;
 
 import java.io.IOException;
 
@@ -77,14 +77,20 @@ public class PoliticianInfoActivity extends AppCompatActivity {
         TextView polName = (TextView) findViewById(R.id.politician_info_name);
         polName.setText(politician.getPoliticianName());
 
-        TextView polParty = (TextView) findViewById(R.id.politician_info_party);
-        polParty.setText(politician.getPartyName());
+        TextView polPartyAcronym = (TextView) findViewById(R.id.politician_info_party_acronym);
+        polPartyAcronym.setText(politician.getParty().getAcronym());
 
+        TextView polPartyName = (TextView) findViewById(R.id.politician_info_party_name);
+        polPartyName.setText(politician.getParty().getName());
+
+        TextView polStateName = (TextView) findViewById(R.id.politician_info_state_name);
+        polStateName.setText(politician.getUf());
+/*
         approvalReasonEdit = (EditText) findViewById(R.id.approval_reason);
         approvalReasonEdit.setText(polClassification.getReason());
         if (polClassification.getApproval().equals(Approval.NEUTRAL)) {
             approvalReasonEdit.setEnabled(false);
-        }
+        }*/
     }
 
     @Override
@@ -94,10 +100,10 @@ public class PoliticianInfoActivity extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        polClassification.setApprovalReason(approvalReasonEdit.getText().toString());
+        /*polClassification.setApprovalReason(approvalReasonEdit.getText().toString());
         CitizenNotebook notebook = presenter.getCurrentNotebook();
         notebook.setPoliticianClassification(polClassification);
-        presenter.saveNotebook(notebook);
+        presenter.saveNotebook(notebook);*/
         super.onStop();
     }
 

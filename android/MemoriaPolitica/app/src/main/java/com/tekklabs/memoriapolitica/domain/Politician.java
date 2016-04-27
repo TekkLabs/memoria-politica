@@ -19,7 +19,7 @@ public class Politician implements Serializable, Comparable {
     private static final Logger LOGGER = Logger.getLogger(Politician.class.getName());
 
     private String cpf = Constants.NULL_CPF;
-    private String party;
+    private Party party;
     private String civilName;
     private String politicianName;
     private String uf;
@@ -46,20 +46,20 @@ public class Politician implements Serializable, Comparable {
     public void setPoliticianName(String thePoliticianName) {
         this.politicianName = thePoliticianName;
         this.politicianNameWithNoAccents = StringUtil.stripAccents(thePoliticianName);
-        this.matcher = new QueryMatcher(politicianName, party, civilName, uf);
+        this.matcher = new QueryMatcher(politicianName, party.getName(), civilName, uf);
     }
 
     public String getPoliticianNameWithNoAccents() {
         return politicianNameWithNoAccents;
     }
 
-    public String getPartyName() {
+    public Party getParty() {
         return party;
     }
 
-    public void setPartyName(String aParty) {
+    public void setParty(Party aParty) {
         this.party = aParty;
-        this.matcher = new QueryMatcher(politicianName, party, civilName, uf);
+        this.matcher = new QueryMatcher(politicianName, party.getName(), civilName, uf);
     }
 
     public Bitmap getPhoto(Context context) throws IOException {
@@ -94,7 +94,7 @@ public class Politician implements Serializable, Comparable {
         if (this.email == null) this.email = candidate.email;
 
         this.politicianNameWithNoAccents = StringUtil.stripAccents(this.politicianName);
-        this.matcher = new QueryMatcher(politicianName, party, civilName, uf);
+        this.matcher = new QueryMatcher(politicianName, party.getName(), civilName, uf);
     }
 
     @Override
@@ -146,5 +146,13 @@ public class Politician implements Serializable, Comparable {
 
         char letter = polName.charAt(0);
         return String.valueOf(letter);
+    }
+
+    public void setUf(String uf) {
+        this.uf = uf;
+    }
+
+    public String getUf() {
+        return uf;
     }
 }

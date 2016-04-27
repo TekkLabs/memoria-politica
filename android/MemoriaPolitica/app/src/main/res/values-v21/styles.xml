@@ -13,7 +13,12 @@
         <item name="android:fastScrollOverlayPosition">atThumb</item>
         <item name="android:fastScrollTextColor">@android:color/white</item>
         <item name="android:fastScrollPreviewBackgroundRight">@color/primary</item>
-        <!--        <item name="android:fastScrollTrackDrawable">@drawable/fastscroll_thumb</item>-->
+
+        <item name="actionOverflowMenuStyle">@style/OptionsMenuStyle</item>
+    </style>
+
+    <style name="OptionsMenuStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@color/primary</item>
     </style>
 
 </resources>

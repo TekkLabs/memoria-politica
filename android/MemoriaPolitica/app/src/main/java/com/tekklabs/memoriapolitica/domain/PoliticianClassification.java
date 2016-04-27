@@ -1,7 +1,5 @@
 package com.tekklabs.memoriapolitica.domain;
 
-import com.tekklabs.memoriapolitica.gui.notebook.Approval;
-
 import java.io.Serializable;
 
 /**

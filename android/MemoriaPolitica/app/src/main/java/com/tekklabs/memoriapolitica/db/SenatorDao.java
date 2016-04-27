@@ -17,17 +17,17 @@ import java.util.List;
  */
 public class SenatorDao extends PoliticianDao {
 
-    public SenatorDao(Context aContext, CandidateDao candidateDao) {
-        super(aContext, candidateDao,  "senators");
+    public SenatorDao(Context aContext, CandidateDao candidateDao, PartyDao partyDao) {
+        super(aContext, candidateDao, partyDao, "senators");
     }
 
     @Override
     protected List<Politician> parseJsonArray(JSONArray jArray) throws JSONException, IOException {
         JSONObject headerObj = jArray.getJSONObject(0);
-        String jsonCpfKey = headerObj.getString(JsonKeys.CPF_KEY);
-        String jsonPartyKey = headerObj.getString(JsonKeys.PARTY_KEY);
-        String jsonStatusKey = headerObj.getString(JsonKeys.STATUS_KEY);
-        String jsonEmailKey = headerObj.getString(JsonKeys.EMAIL_KEY);
+        String jsonCpfKey = headerObj.getString(JsonKeys.CPF_OLD_KEY);
+        String jsonPartyKey = headerObj.getString(JsonKeys.PARTY_OLD_KEY);
+        String jsonStatusKey = headerObj.getString(JsonKeys.STATUS_OLD_KEY);
+        String jsonEmailKey = headerObj.getString(JsonKeys.EMAIL_OLD_KEY);
 
         List<Politician> politicians = new ArrayList<>();
 
@@ -39,7 +39,7 @@ public class SenatorDao extends PoliticianDao {
             String email = jsonPol.getString(jsonEmailKey);
 
             Politician politician = new Politician(cpf);
-            politician.setPartyName(party);
+            politician.setParty(getPartyByAcronym(party));
 
             //politician.setPhotoPath("photos/senators/" + senatorName + ".jpg");
 

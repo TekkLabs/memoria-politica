@@ -2,10 +2,11 @@ package com.tekklabs.memoriapolitica.db;
 
 import android.content.Context;
 
+import com.tekklabs.memoriapolitica.R;
 import com.tekklabs.memoriapolitica.domain.CitizenNotebook;
 import com.tekklabs.memoriapolitica.domain.PoliticianClass;
 import com.tekklabs.memoriapolitica.domain.PoliticianClassification;
-import com.tekklabs.memoriapolitica.gui.notebook.Approval;
+import com.tekklabs.memoriapolitica.domain.Approval;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,9 +15,9 @@ import org.json.JSONObject;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
@@ -28,13 +29,15 @@ public class CitizenNotebookDao extends Dao {
 
     private static final String APPROVED_KEY = "approved";
     private static final String REPROVED_KEY = "reproved";
+    private final PartyDao partyDao;
 
     private PoliticianClassificationDao polClassificationDao;
 
     public CitizenNotebookDao(Context aContext,
-                              PoliticianClassificationDao theClassificationDao) {
+                              PoliticianClassificationDao theClassificationDao, PartyDao partyDao) {
         super(aContext);
         this.polClassificationDao = theClassificationDao;
+        this.partyDao = partyDao;
     }
 
     public CitizenNotebook getNotebook() {
@@ -46,7 +49,7 @@ public class CitizenNotebookDao extends Dao {
         notebook.addNeutralPoliticians(PoliticianClass.FED_DEP, polClassificationDao.getAllNeutral());
 
         try {
-            FileInputStream inputStream = getContext().openFileInput("notebook.json");
+            InputStream inputStream = getContext().getResources().openRawResource(R.raw.notebook);
             InputStreamReader streamReader = new InputStreamReader(inputStream, "UTF-8");
             char[] buffer = new char[500000];
             int size = streamReader.read(buffer);
@@ -62,6 +65,8 @@ public class CitizenNotebookDao extends Dao {
         catch (IOException e) {
             e.printStackTrace();
         }
+
+        notebook.setParties(partyDao.parseParties());
 
         return notebook;
     }

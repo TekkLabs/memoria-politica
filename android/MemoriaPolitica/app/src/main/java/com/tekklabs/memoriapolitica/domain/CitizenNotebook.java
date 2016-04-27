@@ -1,11 +1,11 @@
 package com.tekklabs.memoriapolitica.domain;
 
-import com.tekklabs.memoriapolitica.gui.notebook.Approval;
-
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -15,9 +15,13 @@ import java.util.TreeSet;
  */
 public class CitizenNotebook implements Serializable {
 
+    public static final String KEY = "NOTEBOOK";
+
     private Map<PoliticianClass, Set<PoliticianClassification>> approvedPolMap = new HashMap<>();
     private Map<PoliticianClass, Set<PoliticianClassification>> reprovedPolMap = new HashMap<>();
     private Map<PoliticianClass, Set<PoliticianClassification>> neutralPolMap = new HashMap<>();
+
+    private List<Party> parties = new ArrayList<>();
 
 
     public CitizenNotebook() {
@@ -39,6 +43,14 @@ public class CitizenNotebook implements Serializable {
 
     public Set<PoliticianClassification> getNeutralPoliticians(PoliticianClass polClass) {
         return Collections.unmodifiableSet(neutralPolMap.get(polClass));
+    }
+
+    public Set<PoliticianClassification> getAllPoliticians(PoliticianClass polClass) {
+        Set<PoliticianClassification> politicians = new TreeSet<>();
+        politicians.addAll(getApprovedPoliticians(polClass));
+        politicians.addAll(getNeutralPoliticians(polClass));
+        politicians.addAll(getReprovedPoliticians(polClass));
+        return Collections.unmodifiableSet(politicians);
     }
 
     public void addApprovedPoliticians(PoliticianClass polClass, Collection<PoliticianClassification> polCollection) {
@@ -109,15 +121,12 @@ public class CitizenNotebook implements Serializable {
         }
     }
 
-    public Set<PoliticianClassification> getPoliticians(Approval theApproval, PoliticianClass politicianClass) {
-        if (theApproval.equals(Approval.NEUTRAL)) {
-            return getNeutralPoliticians(politicianClass);
-        }
-        else if (theApproval.equals(Approval.APPROVED)) {
-            return getApprovedPoliticians(politicianClass);
-        }
-        else {
-            return getReprovedPoliticians(politicianClass);
-        }
+    public Collection<Party>getParties() {
+        return Collections.unmodifiableList(parties);
+    }
+
+    public void setParties(Collection<Party> parties) {
+        this.parties.clear();
+        this.parties.addAll(parties);
     }
 }

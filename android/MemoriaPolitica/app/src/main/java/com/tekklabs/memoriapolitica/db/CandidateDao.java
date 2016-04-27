@@ -3,6 +3,7 @@ package com.tekklabs.memoriapolitica.db;
 import android.content.Context;
 import android.util.JsonReader;
 
+import com.tekklabs.memoriapolitica.domain.Party;
 import com.tekklabs.memoriapolitica.domain.Politician;
 
 import org.json.JSONArray;
@@ -18,9 +19,9 @@ import java.util.List;
  */
 public class CandidateDao extends Dao {
 
-    private static List<Politician> allCandidatesCache = new ArrayList<>();
+    private final PartyDao partyDao;
+    private List<Party> parties;
 
-    private String jsonCpfKey = JsonKeys.CPF_KEY;
     private String jsonCivilNameKey = JsonKeys.CIVIL_NAME_KEY;
     private String jsonPoliticianNameKey = JsonKeys.POLITICIAN_NAME_KEY;
     private String jsonPartyKey = JsonKeys.PARTY_KEY;
@@ -28,51 +29,20 @@ public class CandidateDao extends Dao {
 
 
 
-    public CandidateDao(Context aContext) {
+    public CandidateDao(Context aContext, PartyDao partyDao) {
         super(aContext);
+        this.partyDao = partyDao;
+        this.parties = partyDao.parseParties();
     }
-/*
-    List<Politician> getAllCandidates() throws IOException, JSONException {
-        synchronized (allCandidatesCache) {
-            if (allCandidatesCache.isEmpty()) {
-                JSONArray jArray = ResourceUtil.getJsonReaderFromFile(getContext(), "all_candidates");
-                allCandidatesCache.addAll(readArray(jArray));
+
+    private Party getPartyByAcronym(String acronym) {
+        for (Party party : parties) {
+            if (party.getAcronym().equalsIgnoreCase(acronym)) {
+                return party;
             }
         }
 
-        return allCandidatesCache;
-    }
-*/
-    private List<Politician> readArray(JSONArray jArray) throws JSONException, IOException {
-        JSONObject headerObj = jArray.getJSONObject(0);
-        String jsonCpfKey = headerObj.getString(JsonKeys.CPF_KEY);
-        String jsonCivilNameKey = headerObj.getString(JsonKeys.CIVIL_NAME_KEY);
-        String jsonPoliticianNameKey = headerObj.getString(JsonKeys.POLITICIAN_NAME_KEY);
-        String jsonPartyKey = headerObj.getString(JsonKeys.PARTY_KEY);
-        String jsonUfKey = headerObj.getString(JsonKeys.UF_KEY);
-        //String jsonStatusKey = headerObj.getString(statusKey);
-        //String jsonJobsKey = headerObj.getString(jobsKey);
-
-        List<Politician> politicians = new ArrayList<>();
-
-        for (int i = 1; i < jArray.length(); i++)
-        {
-            JSONObject jsonPol = jArray.getJSONObject(i);
-            String cpf = jsonPol.getString(jsonCpfKey);
-            String polName = jsonPol.getString(jsonPoliticianNameKey);
-            String party = jsonPol.getString(jsonPartyKey);
-
-            Politician politician = new Politician(cpf);
-            politician.setPoliticianName(polName);
-            politician.setPartyName(party);
-
-            String uf = jsonPol.getString(jsonUfKey);
-            // ...
-
-            politicians.add(politician);
-        }
-
-        return politicians;
+        return null;
     }
 
     public List<Politician> findCandidates(List<String> cpfList) {
@@ -102,26 +72,11 @@ public class CandidateDao extends Dao {
             }
         }
 
-        return null;
+        throw new IllegalStateException("Algo deu errado na laitura das informacoes dos candidatos.");
     }
 
     private List<Politician> findCandidates(List<String> cpfList, JsonReader reader) throws IOException {
-        resetKeys();
-
         reader.beginArray();
-
-        if (reader.hasNext()) {
-            reader.beginObject();
-            jsonCpfKey = reader.nextName();
-            Politician metadata = new Politician(jsonCpfKey);
-            readJsonObject(reader, metadata);
-
-            jsonCivilNameKey = metadata.getCivilName();
-            jsonPartyKey = metadata.getPartyName();
-            jsonPoliticianNameKey = metadata.getPoliticianName();
-            //jsonUfKey = metadata.get
-            reader.endObject();
-        }
 
         List<Politician> candidates = new ArrayList<>();
         while (reader.hasNext()) {
@@ -141,14 +96,6 @@ public class CandidateDao extends Dao {
 
         reader.endArray();
         return candidates;
-    }
-
-    private void resetKeys() {
-        this.jsonCpfKey = JsonKeys.CPF_KEY;
-        this.jsonCivilNameKey = JsonKeys.CIVIL_NAME_KEY;
-        this.jsonPoliticianNameKey = JsonKeys.POLITICIAN_NAME_KEY;
-        this.jsonPartyKey = JsonKeys.PARTY_KEY;
-        this.jsonUfKey = JsonKeys.UF_KEY;
     }
 
     private Politician readJsonObject(JsonReader reader, Politician pol) throws IOException {
@@ -178,9 +125,10 @@ public class CandidateDao extends Dao {
         }
         reader.endObject();
 
-        pol.setPartyName(party);
+        pol.setParty(getPartyByAcronym(party));
         pol.setPoliticianName(polName);
         pol.setCivilName(civilName);
+        pol.setUf(uf);
         return pol;
     }
 }

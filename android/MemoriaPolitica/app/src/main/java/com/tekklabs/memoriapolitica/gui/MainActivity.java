@@ -3,11 +3,9 @@ package com.tekklabs.memoriapolitica.gui;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.res.Configuration;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,19 +17,19 @@ import android.view.MenuItem;
 
 import com.tekklabs.memoriapolitica.R;
 import com.tekklabs.memoriapolitica.domain.CitizenNotebook;
-import com.tekklabs.memoriapolitica.domain.PoliticianClass;
-import com.tekklabs.memoriapolitica.domain.PoliticianClassification;
-import com.tekklabs.memoriapolitica.gui.notebook.Approval;
-import com.tekklabs.memoriapolitica.gui.notebook.PoliticianListPagerAdapter;
 
 
-public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener,
-                                                        ApprovalDescDialogFragment.NotifyDialogFragmentClicked {
+public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
 
     /**
      * Toolbar replacing the default ActionBar.
      */
-    private Toolbar mToolbar;
+    private Toolbar mToolbarMain;
+
+    /**
+     * Toolbar with a search view component.
+     */
+    private Toolbar mToolbarSearch;
 
     /**
      * Layout of the drawer.
@@ -49,35 +47,60 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     ActionBarDrawerToggle drawerToggle;
 
     private Searchable mSearchableFragment;
-    private ViewPager pager;
-    private PoliticianListPagerAdapter mPagerAdapter;
-
-    private PoliticianClass currentPolClass;
     private Presenter presenter;
+    private PoliticianFragment politicianFragment;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_navigation_drawer);
-
         presenter = new Presenter(this);
         CitizenNotebook notebook = (CitizenNotebook) getIntent().getSerializableExtra("NOTEBOOK");
         presenter.setCurrentNotebook(notebook);
 
+        setContentView(R.layout.activity_main);
+        configureToolbars();
+        configureDrawer();
+        configureFragment(notebook);
+
+        // Select federal deputies menu item.
+        MenuItem menuItem = nvDrawer.getMenu().findItem(R.id.action_federal_deputies);
+        selectDrawerItem(menuItem);
+    }
+
+    private void configureToolbars() {
         // Set a Toolbar to replace the ActionBar.
-        mToolbar = (Toolbar) findViewById(R.id.mainToolbar);
-        setSupportActionBar(mToolbar);
+        mToolbarMain = (Toolbar) findViewById(R.id.mainToolbar);
+        setSupportActionBar(mToolbarMain);
 
-        pager = (ViewPager) findViewById(R.id.mainViewPager);
-        mPagerAdapter = new PoliticianListPagerAdapter(getSupportFragmentManager());
-        currentPolClass = PoliticianClass.FED_DEP;
-        mPagerAdapter.setPoliticianClass(currentPolClass);
-        pager.setAdapter(mPagerAdapter);
+        mToolbarSearch = (Toolbar) findViewById(R.id.search_toolbar);
+        //mToolbarSearch.inflateMenu(R.menu.toolbar_search);
+        //SearchView searchView = (SearchView) mToolbarSearch.getMenu().findItem(R.id.action_search).getActionView();
+        //searchView.setIconifiedByDefault(false);
+        //searchView.setBackgroundColor(Color.WHITE);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.mainTabLayout);
-        tabLayout.setupWithViewPager(pager);
+/*        mToolbarSearch.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                return false;
+            }
+        });
+*/    }
 
+    private void configureFragment(CitizenNotebook notebook) {
+        Bundle bundle = new Bundle();
+        bundle.putSerializable(CitizenNotebook.KEY, notebook);
+
+        this.politicianFragment = new PoliticianFragment();
+        this.politicianFragment.setArguments(bundle);
+
+        getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.main_view, politicianFragment)
+                .commit();
+    }
+
+    private void configureDrawer() {
         mDrawer = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         // Find our drawer view
@@ -88,10 +111,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         drawerToggle = setupDrawerToggle();
         // Tie DrawerLayout events to the ActionBarToggle
         mDrawer.setDrawerListener(drawerToggle);
-
-        // Select all politicians menu item.
-        MenuItem menuItem = nvDrawer.getMenu().findItem(R.id.action_federal_deputies);
-        selectDrawerItem(menuItem);
     }
 
     private void setupDrawerContent(NavigationView navigationView) {
@@ -106,7 +125,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
     private ActionBarDrawerToggle setupDrawerToggle() {
-        return new ActionBarDrawerToggle(this, mDrawer, mToolbar, 0,  0);
+        return new ActionBarDrawerToggle(this, mDrawer, mToolbarMain, 0,  0);
     }
 
     @Override
@@ -124,25 +143,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
     public void selectDrawerItem(MenuItem menuItem) {
-        Fragment fragment = null;
-        Bundle bundle = new Bundle();
-
-        switch(menuItem.getItemId()) {
-            case R.id.action_federal_deputies:
-                mPagerAdapter.setPoliticianClass(PoliticianClass.FED_DEP);
-                break;
-/*            case R.id.action_senators:
-                mPagerAdapter.setPoliticianClass(PoliticianClass.SENATORS);
-                break;
-            case R.id.action_settings:
-                fragment = SettingsFragment.newInstance("", "");
-                break;*/
-            default:
-                throw new IllegalArgumentException("Item de menu do drawer inválido.");
-        }
-
-        pager.setCurrentItem(PoliticianListPagerAdapter.NEUTRAL_ITEM);
-
         // Highlight the selected item, update the title, and close the drawer
         menuItem.setChecked(true);
         setTitle(menuItem.getTitle());
@@ -153,17 +153,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu items for use in the action bar
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.navigation_drawer_activity_actions, menu);
-/*
-        // Get the SearchView and set the searchable configuration
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchView searchView = (SearchView) menu.findItem(R.id.action_search).getActionView();
+        inflater.inflate(R.menu.toolbar_menu_actions, menu);
 
-        // Assumes current activity is the searchable activity
-        searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
-        searchView.setOnQueryTextListener((SearchView.OnQueryTextListener) this);
-        searchView.setSubmitButtonEnabled(true);
-*/
         return super.onCreateOptionsMenu(menu);
     }
 
@@ -202,16 +193,38 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         return mSearchableFragment.onQueryTextChange(newText);
     }
 
-    public Presenter getPresenter() {
-        return presenter;
+    public CitizenNotebook getNotebook() {
+        return presenter.getCurrentNotebook();
     }
 
-    public void fragmentChanged() {
-        mPagerAdapter.notifyFragments();
-    }
+    /**
+     * Chamado quando o usuário clica em um item do menu Ordenar.
+     * @param menuItem
+     */
+    public void onSortMenuItemSelected(MenuItem menuItem) {
+        menuItem.setChecked(true);
 
-    @Override
-    public void onDialogClick(Approval approval, PoliticianClassification polClassification) {
-        mPagerAdapter.onDialogClick(approval, polClassification);
+        switch (menuItem.getItemId()) {
+            case R.id.action_sort_by_state:
+                politicianFragment.sortPolitician(SortMode.BY_STATE);
+                break;
+            case R.id.action_sort_by_party:
+                politicianFragment.sortPolitician(SortMode.BY_PARTY);
+                break;
+            case R.id.action_sort_by_name:
+                politicianFragment.sortPolitician(SortMode.BY_NAME);
+                break;
+            case R.id.action_sort_by_approved_first:
+                politicianFragment.sortPolitician(SortMode.BY_APPROVED_FIRST);
+                break;
+            case R.id.action_sort_by_neutral_first:
+                politicianFragment.sortPolitician(SortMode.BY_NEUTRAL_FIRST);
+                break;
+            case R.id.action_sort_by_reproved_first:
+                politicianFragment.sortPolitician(SortMode.BY_REPROVED_FIRST);
+                break;
+            default:
+                throw new IllegalArgumentException("Item de menu de ordenacão inválido.");
+        }
     }
 }

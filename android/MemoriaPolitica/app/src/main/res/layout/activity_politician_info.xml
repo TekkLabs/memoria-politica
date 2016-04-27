@@ -44,7 +44,9 @@
 
             <TextView
                 android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
+                android:gravity="right"
+                android:textSize="20sp"
                 android:id="@+id/pol_name"
                 android:text="Nome:"/>
 
@@ -52,6 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_toRightOf="@id/pol_name"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
                 android:id="@+id/politician_info_name"
                 android:text="NOME"/>
         </RelativeLayout>
@@ -59,11 +63,38 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/name_tuple">
+            android:layout_below="@id/name_tuple"
+            android:id="@+id/party_acronym_tuple">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:id="@+id/party_acronym"
+                android:text="Sigla:"/>
 
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/party_acronym"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:id="@+id/politician_info_party_acronym"
+                android:text="XPTO"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/party_acronym_tuple"
+            android:id="@+id/party_tuple">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:gravity="right"
+                android:textSize="20sp"
                 android:id="@+id/party_name"
                 android:text="Partido:"/>
 
@@ -71,20 +102,35 @@
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:layout_toRightOf="@id/party_name"
-                android:id="@+id/politician_info_party"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:id="@+id/politician_info_party_name"
                 android:text="XPTO"/>
         </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/party_tuple">
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="80dp"
+                android:gravity="right"
+                android:textSize="20sp"
+                android:id="@+id/state_name"
+                android:text="Estado:"/>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_toRightOf="@id/state_name"
+                android:layout_marginLeft="10dp"
+                android:textSize="20sp"
+                android:id="@+id/politician_info_state_name"
+                android:text="XPTO"/>
+        </RelativeLayout>
+
     </RelativeLayout>
-
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Motivo:" />
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:singleLine="false"
-        android:id="@+id/approval_reason"/>
 
 </LinearLayout>

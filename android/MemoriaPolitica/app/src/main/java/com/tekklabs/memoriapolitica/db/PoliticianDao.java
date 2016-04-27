@@ -2,6 +2,7 @@ package com.tekklabs.memoriapolitica.db;
 
 import android.content.Context;
 
+import com.tekklabs.memoriapolitica.domain.Party;
 import com.tekklabs.memoriapolitica.domain.Politician;
 
 import org.json.JSONArray;
@@ -18,13 +19,26 @@ import java.util.List;
 public abstract class PoliticianDao extends Dao {
 
     private static List<Politician> politiciansCache = new ArrayList<>();
+    private final PartyDao partyDao;
     private CandidateDao candidateDao;
     private String resourceName;
 
-    public PoliticianDao(Context aContext, CandidateDao candidateDao, String resourceName) {
+    public PoliticianDao(Context aContext, CandidateDao candidateDao, PartyDao partyDao, String resourceName) {
         super(aContext);
         this.candidateDao = candidateDao;
+        this.partyDao = partyDao;
         this.resourceName = resourceName;
+    }
+
+    protected Party getPartyByAcronym(String partyAcronym) {
+        List<Party> parties = partyDao.parseParties();
+        for (Party party : parties) {
+            if (party.getAcronym().equalsIgnoreCase(partyAcronym)) {
+                return party;
+            }
+        }
+
+        return null;
     }
 
     public List<Politician> getAll() {

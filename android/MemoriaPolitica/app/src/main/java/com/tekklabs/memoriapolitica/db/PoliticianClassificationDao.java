@@ -4,7 +4,7 @@ import android.content.Context;
 
 import com.tekklabs.memoriapolitica.domain.Politician;
 import com.tekklabs.memoriapolitica.domain.PoliticianClassification;
-import com.tekklabs.memoriapolitica.gui.notebook.Approval;
+import com.tekklabs.memoriapolitica.domain.Approval;
 
 import org.json.JSONArray;
 import org.json.JSONException;
