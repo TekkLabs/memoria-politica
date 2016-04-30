@@ -9,14 +9,17 @@ import java.util.List;
 /**
  * Created by PC on 22/07/2015.
  */
-public abstract class Csv2JsonParser {
+public class Csv2JsonParser {
 
     private String separator;
     private boolean skipFirstLine;
+    private final JsonObjectCreator objCreator;
 
-    public Csv2JsonParser(String theSeparator, boolean skipFirstLine) {
+
+    public Csv2JsonParser(String theSeparator, boolean skipFirstLine, JsonObjectCreator objCreator) {
         this.separator = theSeparator;
         this.skipFirstLine = skipFirstLine;
+        this.objCreator = objCreator;
     }
 
     public final JSONArray writeJson(List<String> csvContent) throws IOException {
@@ -26,14 +29,13 @@ public abstract class Csv2JsonParser {
             csvContent.remove(0);
         }
 
+
         for (String line : csvContent) {
             String[] items = line.split(separator + "(?=([^\"]*\"[^\"]*\")*[^\"]*$)", -1);
-            JSONObject jsonPol = processLine(items);
+            JSONObject jsonPol = objCreator.processLine(items);
             jArray.add(jsonPol);
         }
 
         return jArray;
     }
-
-    protected abstract JSONObject processLine(String[] items);
 }

@@ -71,15 +71,17 @@ public class Json2Model {
     private static FedDep createFedDep(JSONObject jObj) {
         String civilName = (String) jObj.get(JsonAttributes.NOME_CIVIL);
         if (civilName == null) {
-            throw new IllegalStateException("O objeto JSON n�o tem o campo obrigat�rio NOME_CIVIL.");
+            throw new IllegalStateException("O objeto JSON não tem o campo obrigatório NOME_CIVIL.");
         }
 
+        String politicianName = (String) jObj.get(JsonAttributes.NOME_POLITICO);
         String email = (String) jObj.get(JsonAttributes.EMAIL);
         String party = (String) jObj.get(JsonAttributes.PARTIDO);
         String status = (String) jObj.get(JsonAttributes.STATUS);
 
         FedDep pol = new FedDep();
         pol.civilName = civilName;
+        pol.politicianName = politicianName;
         pol.email = email;
         pol.party = party;
         pol.status = status;

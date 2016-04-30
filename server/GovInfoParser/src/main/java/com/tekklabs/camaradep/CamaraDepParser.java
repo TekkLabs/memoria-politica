@@ -4,6 +4,7 @@ import com.tekklabs.model.Json2Model;
 import com.tekklabs.model.Politician2Json;
 import com.tekklabs.model.entities.Candidate;
 import com.tekklabs.model.entities.FedDep;
+import com.tekklabs.util.Csv2JsonParser;
 import com.tekklabs.util.FileReader;
 import com.tekklabs.util.JSONWriter;
 
@@ -69,7 +70,7 @@ public class CamaraDepParser {
         try {
             String csvFilePath = args[1];
             List<String> csvContent = FileReader.readCsv(csvFilePath, "ISO-8859-1");
-            JSONArray jsonArray = new Csv2JsonCamDepParser(",", true).writeJson(csvContent);
+            JSONArray jsonArray = new Csv2JsonParser(",", true, new FedDepJsonObjectCreator()).writeJson(csvContent);
             List<FedDep> fedDepList = Json2Model.json2FedDep(jsonArray);
 
             FileInputStream fis = new FileInputStream(args[2]);

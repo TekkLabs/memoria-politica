@@ -1,6 +1,7 @@
 package com.tekklabs.tse;
 
-import com.tekklabs.tse.parser.Csv2JsonTseParser;
+import com.tekklabs.tse.parser.CandidateJsonObjectCreator;
+import com.tekklabs.util.Csv2JsonParser;
 import com.tekklabs.util.FileReader;
 import com.tekklabs.util.JSONWriter;
 import com.tekklabs.util.MergeFilesUtility;
@@ -129,7 +130,7 @@ public class TseInfoParser {
             String csvFilePath = args[1];
             String jsonFilePath = args[2];
             List<String> csvContent = FileReader.readCsv(csvFilePath, "ISO-8859-1");
-            JSONArray tseJsonArray = new Csv2JsonTseParser(";", false).writeJson(csvContent);
+            JSONArray tseJsonArray = new Csv2JsonParser(";", false, new CandidateJsonObjectCreator()).writeJson(csvContent);
 
             JSONWriter writer = new JSONWriter();
             tseJsonArray.writeJSONString(writer);

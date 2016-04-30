@@ -5,6 +5,7 @@ import android.util.JsonReader;
 
 import com.tekklabs.memoriapolitica.domain.Party;
 import com.tekklabs.memoriapolitica.domain.Politician;
+import com.tekklabs.memoriapolitica.util.StringUtil;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -131,6 +132,7 @@ public class CandidateDao extends Dao {
         pol.setUf(uf);
 
         String fileName = pol.getPoliticianName().toUpperCase();
+        fileName = StringUtil.stripAccents(fileName);
         pol.setPhotoPath("photos/federal_deputies/" + fileName + ".jpg");
 
         return pol;

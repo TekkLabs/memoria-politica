@@ -14,7 +14,6 @@ import org.apache.pdfbox.util.PDFOperator;
 import javax.imageio.*;
 import javax.imageio.stream.FileImageOutputStream;
 import javax.imageio.stream.ImageOutputStream;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.HashMap;
@@ -23,8 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Petrobras - TIC-EP/GIDSEP
- * Created by y5kx on 28/04/16.
+ * Created by PC on 28/04/16.
  */
 public final class FedDepPhotosUtility {
 
@@ -281,18 +279,5 @@ public final class FedDepPhotosUtility {
         jpgWriter.write(null, outputImage, jpgWriteParam);
 
         return true;
-    }
-
-    public static BufferedImage toBufferedImage(Image img) {
-        if (img instanceof BufferedImage) {
-            return (BufferedImage) img;
-        }
-
-        BufferedImage image = new BufferedImage(img.getWidth(null), img.getHeight(null), BufferedImage.TYPE_INT_ARGB);
-        Graphics2D bGr = image.createGraphics();
-        bGr.drawImage(img, 0, 0, null);
-        bGr.dispose();
-
-        return image;
     }
 }

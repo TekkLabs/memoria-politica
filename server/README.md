@@ -9,13 +9,18 @@ o seguinte conversor CSV2JSON foi utilizado:
 http://www.convertcsv.com/csv-to-json.htm
 
 
-As fotos dos deputados (carometro) foram extraídas do PDF usando o programa:
-PDF IMage Extractor 2.5.0.0
-Download CNET
-
-As imagens que foram extraídas como *.ppm foram convertidas para *.jpg com o conversor online:
-http://image.online-convert.com/convert-to-jpg
-
+*** Candidatos ***
 Os dados pessoais dos candidatos foram obtidos no site do TSE:
 http://www.tse.jus.br/hotSites/pesquisas-eleitorais/candidatos_anos/2014.html
 Baixado o arquivo consulta_cand_2014.zip
+
+*** Fotos dos Deputados Federais ***
+As fotos dos deputados (carometro) são extraídas do arquivo PDF pelo GovInfoParser, através do utilitário FedDepPhotosUtility.
+Esse utilitário também é utilizado para comprimir as fotos para diminuir seu tamanho.
+No geral, uma reducão de 30% na qualidade gera mais de 70% de reducão no tamanho do arquivo.
+
+*** Próximos passos ***
+ - Baixar o arquivo deputados.xls automaticamente.
+ - Converter o arquivo .xls para .json.
+ - Baixar o arquivo consulta_cand_YYYY.zip automaticamente
+ - Fazer um script que automatiza os passos acima.

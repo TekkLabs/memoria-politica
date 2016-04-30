@@ -7,6 +7,7 @@ public class FedDep {
 
     public String cpf;
     public String civilName;
+    public String politicianName;
     public String party;
     public String status;
     public String email;

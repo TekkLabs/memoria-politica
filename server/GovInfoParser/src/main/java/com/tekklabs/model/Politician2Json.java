@@ -38,6 +38,7 @@ public class Politician2Json {
 
     public JSONObject fedDep2Json(FedDep fedDep) {
         JSONObject jObj = new JSONObject();
+        jObj.put(JsonAttributes.NOME_POLITICO, fedDep.politicianName);
         jObj.put(JsonAttributes.CPF_CANDIDATO, fedDep.cpf);
         jObj.put(JsonAttributes.EMAIL, fedDep.email);
         jObj.put(JsonAttributes.STATUS, fedDep.status);

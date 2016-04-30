@@ -4,6 +4,7 @@ import com.tekklabs.model.Json2Model;
 import com.tekklabs.model.Politician2Json;
 import com.tekklabs.model.entities.Candidate;
 import com.tekklabs.model.entities.Senator;
+import com.tekklabs.util.Csv2JsonParser;
 import com.tekklabs.util.FileReader;
 import com.tekklabs.util.JSONWriter;
 
@@ -69,7 +70,7 @@ public class SenatorsParser {
         try {
             String csvFilePath = args[1];
             List<String> csvContent = FileReader.readCsv(csvFilePath, "UTF-8");
-            JSONArray jsonArray = new Csv2JsonSenatorsParser(";", true).writeJson(csvContent);
+            JSONArray jsonArray = new Csv2JsonParser(";", true, new SenatorsJsonObjectCreator()).writeJson(csvContent);
             List<Senator> senatorList = Json2Model.json2Senator(jsonArray);
 
             FileInputStream fis = new FileInputStream(args[2]);
