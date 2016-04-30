@@ -16,6 +16,6 @@ public class FedDepCsvColumns implements ConsultaCandColumns {
         else if (JsonAttributes.PARTIDO.equals(name)) return 1;
         else if (JsonAttributes.STATUS.equals(name)) return 3;
         else if (JsonAttributes.EMAIL.equals(name)) return 13;
-        else throw new IllegalArgumentException("Nome de atributo inv�lido.");
+        else throw new IllegalArgumentException("Nome de atributo inválido.");
     }
 }

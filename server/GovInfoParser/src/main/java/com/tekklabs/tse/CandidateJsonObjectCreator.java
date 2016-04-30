@@ -1,8 +1,7 @@
-package com.tekklabs.tse.parser;
+package com.tekklabs.tse;
 
 import com.tekklabs.model.entities.JsonAttributes;
 import com.tekklabs.util.ConsultaCandColumns;
-import com.tekklabs.util.Csv2JsonParser;
 import com.tekklabs.util.JsonObjectCreator;
 
 import org.json.simple.JSONObject;

@@ -63,7 +63,7 @@ public class CamaraDepParser {
 
     private static boolean csv2json(String[] args) {
         if (args.length != 4) {
-            System.out.println("Numero de argumentos incorreto. Utilize '--help' para ajuda.");
+            System.out.println("Número de argumentos incorreto. Utilize '--help' para ajuda.");
             return false;
         }
 

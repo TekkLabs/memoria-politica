@@ -5,11 +5,12 @@
 ####											                                           ####
 #### Esse script automatiza o trabalho de processar as informacões dos deputados federais. ####
 #### Passos executados:                                                                    ####
-####            Download do arquivo excel com informacões dos deputados.                   ####
-####            Conversão do arquivo excel em um arquivo json.                             ####
 ####            Download do arquivo PDF com as fotos dos deputados.                        ####
-####		Extracao das fotos dos deputados.					                           ####
-####		Compressão das fotos dos deputados.					                           ####
+####		    Extracao das fotos dos deputados.					                       ####
+####		    Compressão das fotos dos deputados.					                       ####
+####            Download do arquivo XLS com informacões dos deputados.                     ####
+####            Conversão do arquivo XLS em um arquivo XLSX para facilitar a leitura.      ####
+####            Conversão do arquivo XLSX em um arquivo json.                              ####
 ####											                                           ####
 #### Modo de uso:									                                       ####
 ####		./FedDepEater <program_jar> <dir_saida>					                       ####
@@ -29,7 +30,7 @@ if [ $# -eq 0 ]; then
     exit 1
 fi
 
-if [ $# -eq 1 ] && ['$1' == '--help' ]; then
+if [ $# -eq 1 ] && [ $1 == '--help' ]; then
     echo 'Modo de uso: ./FedDepEater <program_jar> <dir_saida>'
     echo '<program_jar> = Caminho do jar do GovInfoParser.'
     echo '<dir_saida> = Diretório de trabalho onde são salvos os arquivos.'

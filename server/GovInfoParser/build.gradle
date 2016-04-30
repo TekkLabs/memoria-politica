@@ -23,7 +23,7 @@ task jarWithDependencies(type: Jar) {
                 'Implementation-Version': version
     }
 
-    baseName = project.name + '-all'
+    classifier = 'all'
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }

@@ -88,11 +88,9 @@ public class Politician implements Serializable, Comparable {
 
         if (this.party == null) this.party = candidate.party;
         if (this.civilName == null) this.civilName = candidate.civilName;
-        if (this.politicianName == null) this.politicianName = candidate.politicianName;
         if (this.uf == null) this.uf = candidate.uf;
         if (this.status == null) this.status = candidate.status;
         if (this.email == null) this.email = candidate.email;
-        if (this.photoPath == null) this.photoPath = candidate.photoPath;
 
         this.politicianNameWithNoAccents = StringUtil.stripAccents(this.politicianName);
         this.matcher = new QueryMatcher(politicianName, party.getName(), civilName, uf);
@@ -155,5 +153,13 @@ public class Politician implements Serializable, Comparable {
 
     public String getUf() {
         return uf;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

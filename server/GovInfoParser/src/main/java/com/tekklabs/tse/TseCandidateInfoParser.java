@@ -1,6 +1,5 @@
 package com.tekklabs.tse;
 
-import com.tekklabs.tse.parser.CandidateJsonObjectCreator;
 import com.tekklabs.util.Csv2JsonParser;
 import com.tekklabs.util.FileReader;
 import com.tekklabs.util.JSONWriter;
@@ -19,7 +18,7 @@ import java.util.List;
 /**
  * Created by PC on 20/07/2015.
  */
-public class TseInfoParser {
+public class TseCandidateInfoParser {
 
     private static final String HELP_TAG = "--help";
     private static final String EXTRACT_TAG = "--extract";
@@ -61,9 +60,9 @@ public class TseInfoParser {
     private static void printHelp() {
         System.out.println("===== Ajuda do Leitor de dados cadastrais de candidator do TSE =====");
         System.out.println();
-        System.out.println("Modo de uso: ./TseInfoParser " + EXTRACT_TAG + " <filePath.zip> <destDir>");
-        System.out.println("Modo de uso: ./TseInfoParser " + MERGE_TAG + " <dir> <destFilePath>");
-        System.out.println("Modo de uso: ./TseInfoParser " + CSV2JSON_TAG + " <csvFilePath> <jsonFilePath>");
+        System.out.println("Modo de uso: ./TseCandidateInfoParser " + EXTRACT_TAG + " <filePath.zip> <destDir>");
+        System.out.println("Modo de uso: ./TseCandidateInfoParser " + MERGE_TAG + " <dir> <destFilePath>");
+        System.out.println("Modo de uso: ./TseCandidateInfoParser " + CSV2JSON_TAG + " <csvFilePath> <jsonFilePath>");
         System.out.println("======================================");
     }
 

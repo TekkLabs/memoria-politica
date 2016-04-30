@@ -1,4 +1,4 @@
-package com.tekklabs.tse.parser;
+package com.tekklabs.tse;
 
 import com.tekklabs.model.entities.JsonAttributes;
 import com.tekklabs.util.ConsultaCandColumns;

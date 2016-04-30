@@ -131,10 +131,6 @@ public class CandidateDao extends Dao {
         pol.setCivilName(civilName);
         pol.setUf(uf);
 
-        String fileName = pol.getPoliticianName().toUpperCase();
-        fileName = StringUtil.stripAccents(fileName);
-        pol.setPhotoPath("photos/federal_deputies/" + fileName + ".jpg");
-
         return pol;
     }
 }
