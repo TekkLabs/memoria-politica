@@ -43,6 +43,7 @@ public class FedDepDao extends PoliticianDao {
             Party party = getPartyByAcronym(partyAcronym);
             politician.setParty(party);
 
+            /*
             String photoNumber;
             int photoIndex = i-1;
             if (photoIndex < 10) photoNumber = "00";
@@ -51,7 +52,7 @@ public class FedDepDao extends PoliticianDao {
 
             String fileName = "carometro_legislatura55-" + photoNumber + photoIndex;
             politician.setPhotoPath("photos/federal_deputies/" + fileName + ".jpg");
-
+            */
 
             politicians.add(politician);
         }

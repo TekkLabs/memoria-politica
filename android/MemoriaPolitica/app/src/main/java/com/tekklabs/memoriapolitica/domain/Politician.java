@@ -92,6 +92,7 @@ public class Politician implements Serializable, Comparable {
         if (this.uf == null) this.uf = candidate.uf;
         if (this.status == null) this.status = candidate.status;
         if (this.email == null) this.email = candidate.email;
+        if (this.photoPath == null) this.photoPath = candidate.photoPath;
 
         this.politicianNameWithNoAccents = StringUtil.stripAccents(this.politicianName);
         this.matcher = new QueryMatcher(politicianName, party.getName(), civilName, uf);

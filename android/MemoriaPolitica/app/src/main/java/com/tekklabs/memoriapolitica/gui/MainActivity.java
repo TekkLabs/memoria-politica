@@ -3,12 +3,15 @@ package com.tekklabs.memoriapolitica.gui;
 import android.app.SearchManager;
 import android.content.Intent;
 import android.content.res.Configuration;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -46,9 +49,13 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
      */
     ActionBarDrawerToggle drawerToggle;
 
+    /**
+     * Adapter da view de políticos.
+     */
+    private PoliticianCardAdapter mPoliticiansCardAdapter;
+
     private Searchable mSearchableFragment;
     private Presenter presenter;
-    private PoliticianFragment politicianFragment;
 
 
     @Override
@@ -61,11 +68,21 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         setContentView(R.layout.activity_main);
         configureToolbars();
         configureDrawer();
-        configureFragment(notebook);
+        configurePoliticiansView();
 
         // Select federal deputies menu item.
         MenuItem menuItem = nvDrawer.getMenu().findItem(R.id.action_federal_deputies);
         selectDrawerItem(menuItem);
+    }
+
+    private void configurePoliticiansView() {
+        RecyclerView mPoliticiansView = (RecyclerView) findViewById(R.id.politician_grid);
+        mPoliticiansCardAdapter = new PoliticianCardAdapter(presenter.getCurrentNotebook());
+
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
+        mPoliticiansView.setLayoutManager(mLayoutManager);
+        mPoliticiansView.setItemAnimator(new DefaultItemAnimator());
+        mPoliticiansView.setAdapter(mPoliticiansCardAdapter);
     }
 
     private void configureToolbars() {
@@ -73,31 +90,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         mToolbarMain = (Toolbar) findViewById(R.id.mainToolbar);
         setSupportActionBar(mToolbarMain);
 
-        mToolbarSearch = (Toolbar) findViewById(R.id.search_toolbar);
-        //mToolbarSearch.inflateMenu(R.menu.toolbar_search);
-        //SearchView searchView = (SearchView) mToolbarSearch.getMenu().findItem(R.id.action_search).getActionView();
-        //searchView.setIconifiedByDefault(false);
-        //searchView.setBackgroundColor(Color.WHITE);
-
-/*        mToolbarSearch.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                return false;
-            }
-        });
-*/    }
-
-    private void configureFragment(CitizenNotebook notebook) {
-        Bundle bundle = new Bundle();
-        bundle.putSerializable(CitizenNotebook.KEY, notebook);
-
-        this.politicianFragment = new PoliticianFragment();
-        this.politicianFragment.setArguments(bundle);
-
-        getSupportFragmentManager()
-                .beginTransaction()
-                .add(R.id.main_view, politicianFragment)
-                .commit();
+        //mToolbarSearch = (Toolbar) findViewById(R.id.search_toolbar);
     }
 
     private void configureDrawer() {
@@ -206,22 +199,22 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         switch (menuItem.getItemId()) {
             case R.id.action_sort_by_state:
-                politicianFragment.sortPolitician(SortMode.BY_STATE);
+                mPoliticiansCardAdapter.sortItems(SortMode.BY_STATE);
                 break;
             case R.id.action_sort_by_party:
-                politicianFragment.sortPolitician(SortMode.BY_PARTY);
+                mPoliticiansCardAdapter.sortItems(SortMode.BY_PARTY);
                 break;
             case R.id.action_sort_by_name:
-                politicianFragment.sortPolitician(SortMode.BY_NAME);
+                mPoliticiansCardAdapter.sortItems(SortMode.BY_NAME);
                 break;
             case R.id.action_sort_by_approved_first:
-                politicianFragment.sortPolitician(SortMode.BY_APPROVED_FIRST);
+                mPoliticiansCardAdapter.sortItems(SortMode.BY_APPROVED_FIRST);
                 break;
             case R.id.action_sort_by_neutral_first:
-                politicianFragment.sortPolitician(SortMode.BY_NEUTRAL_FIRST);
+                mPoliticiansCardAdapter.sortItems(SortMode.BY_NEUTRAL_FIRST);
                 break;
             case R.id.action_sort_by_reproved_first:
-                politicianFragment.sortPolitician(SortMode.BY_REPROVED_FIRST);
+                mPoliticiansCardAdapter.sortItems(SortMode.BY_REPROVED_FIRST);
                 break;
             default:
                 throw new IllegalArgumentException("Item de menu de ordenacão inválido.");
