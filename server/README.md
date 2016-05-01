@@ -18,5 +18,5 @@ Esse utilitário lê os dados e cria um arquivo JSON ao final.
 cd GovInfoParser
 gradle jarWithDependencies
 cd src/main/scripts
-./FedDepEater.sh ../../../build/libs/GovInfoParser-all-1.0.jar  <output_dir>
+./FedDepEater.sh ../../../build/libs/GovInfoParser-all-1.0.jar  output_dir
 </pre>
