@@ -10,19 +10,25 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.OrientationHelper;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.tekklabs.memoriapolitica.R;
 import com.tekklabs.memoriapolitica.domain.CitizenNotebook;
+import com.tekklabs.memoriapolitica.gui.politicianlistsection.PoliticianSectionIndicator;
+
+import xyz.danoz.recyclerviewfastscroller.sectionindicator.title.SectionTitleIndicator;
+import xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScroller;
 
 
-public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
+public class MainActivity extends AppCompatActivity {
 
     /**
      * Toolbar replacing the default ActionBar.
@@ -33,6 +39,13 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
      * Toolbar with a search view component.
      */
     private Toolbar mToolbarSearch;
+
+    /**
+     * SearchView placed in mToolbarSearch.
+     */
+    private SearchView mSearchView;
+
+    private PoliticianSearchManager mSearchManager;
 
     /**
      * Layout of the drawer.
@@ -54,7 +67,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
      */
     private PoliticianCardAdapter mPoliticiansCardAdapter;
 
-    private Searchable mSearchableFragment;
     private Presenter presenter;
 
 
@@ -66,9 +78,9 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         presenter.setCurrentNotebook(notebook);
 
         setContentView(R.layout.activity_main);
-        configureToolbars();
-        configureDrawer();
         configurePoliticiansView();
+        configureDrawer();
+        configureToolbars();
 
         // Select federal deputies menu item.
         MenuItem menuItem = nvDrawer.getMenu().findItem(R.id.action_federal_deputies);
@@ -77,8 +89,15 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
     private void configurePoliticiansView() {
         RecyclerView mPoliticiansView = (RecyclerView) findViewById(R.id.politician_grid);
+        VerticalRecyclerViewFastScroller fastScroller = (VerticalRecyclerViewFastScroller) findViewById(R.id.fast_scroller);
+        PoliticianSectionIndicator sectionIndicator = (PoliticianSectionIndicator) findViewById(R.id.fast_scroller_section_indicator);
+        fastScroller.setRecyclerView(mPoliticiansView);
+        fastScroller.setSectionIndicator(sectionIndicator);
+        mPoliticiansView.addOnScrollListener(fastScroller.getOnScrollListener());
+
         mPoliticiansCardAdapter = new PoliticianCardAdapter(presenter.getCurrentNotebook());
 
+        //RecyclerView.LayoutManager mLayoutManager = new StaggeredGridLayoutManager(2, OrientationHelper.VERTICAL);
         RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
         mPoliticiansView.setLayoutManager(mLayoutManager);
         mPoliticiansView.setItemAnimator(new DefaultItemAnimator());
@@ -86,11 +105,14 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     }
 
     private void configureToolbars() {
-        // Set a Toolbar to replace the ActionBar.
         mToolbarMain = (Toolbar) findViewById(R.id.mainToolbar);
         setSupportActionBar(mToolbarMain);
 
-        //mToolbarSearch = (Toolbar) findViewById(R.id.search_toolbar);
+        mToolbarSearch = (Toolbar) findViewById(R.id.search_toolbar);
+        mSearchView = (SearchView) mToolbarSearch.findViewById(R.id.main_search_view);
+
+        mSearchManager = new PoliticianSearchManager(presenter.getCurrentNotebook(), mPoliticiansCardAdapter);
+        mSearchView.setOnQueryTextListener(mSearchManager);
     }
 
     private void configureDrawer() {
@@ -159,37 +181,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         return super.onOptionsItemSelected(item);
     }
 
-    @Override
-    protected void onNewIntent(Intent intent) {
-        // Verify the action and get the query
-        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
-            if (mSearchableFragment != null) {
-                String query = intent.getStringExtra(SearchManager.QUERY);
-                mSearchableFragment.onSearchRequested(query);
-            }
-        }
-
-        super.onNewIntent(intent);
-    }
-
-    public void setSearchableFragment(Searchable searchableFragment) {
-        this.mSearchableFragment = searchableFragment;
-    }
-
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        return mSearchableFragment.onQueryTextSubmit(query);
-    }
-
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        return mSearchableFragment.onQueryTextChange(newText);
-    }
-
-    public CitizenNotebook getNotebook() {
-        return presenter.getCurrentNotebook();
-    }
-
     /**
      * Chamado quando o usuário clica em um item do menu Ordenar.
      * @param menuItem
@@ -199,7 +190,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         switch (menuItem.getItemId()) {
             case R.id.action_sort_by_state:
-                mPoliticiansCardAdapter.sortItems(SortMode.BY_STATE);
+                mPoliticiansCardAdapter.sortItems(SortMode.BY_UF);
                 break;
             case R.id.action_sort_by_party:
                 mPoliticiansCardAdapter.sortItems(SortMode.BY_PARTY);
@@ -219,5 +210,13 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             default:
                 throw new IllegalArgumentException("Item de menu de ordenacão inválido.");
         }
+    }
+
+    /**
+     * Activate search when card is clicked in the toolbar.
+     * @param view
+     */
+    public void onSearchCardCliked(View view) {
+        mSearchView.setIconified(false);
     }
 }

@@ -14,11 +14,6 @@ public class ListViewSectionManager implements ListViewSectionIndexer {
     private ListViewSectionIndexer sectionsToShow = new ListViewSectionByName();
     private SortMode currentSortMode = SortMode.BY_NAME;
 
-    private final CitizenNotebook notebook;
-
-    public ListViewSectionManager(CitizenNotebook theNotebook) {
-        this.notebook = theNotebook;
-    }
 
     public SortMode getCurrentSortMode() {
         return currentSortMode;
@@ -34,7 +29,7 @@ public class ListViewSectionManager implements ListViewSectionIndexer {
             case BY_PARTY:
                 this.sectionsToShow = new ListViewSectionByParty();
                 break;
-            case BY_STATE:
+            case BY_UF:
                 this.sectionsToShow = new ListViewSectionByState();
                 break;
             case BY_APPROVED_FIRST:

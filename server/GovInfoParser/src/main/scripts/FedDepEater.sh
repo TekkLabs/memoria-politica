@@ -42,10 +42,13 @@ program_jar=$1
 output_dir=$2
 
 
+if [ ! -d "$output_dir" ]; then
+  mkdir $output_dir
+fi
+
 
 ## Processing Politicians photos
 photos_file=$output_dir'/photos.pdf'
-mkdir $output_dir
 wget -O $photos_file 'http://www.camara.leg.br/internet/infdoc/novoconteudo/Acervo/CELEG/Carometro/carometro_legislatura55.pdf'
 
 photos_tmp_dir=$output_dir'/photos_tmp'

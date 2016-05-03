@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by PC on 24/07/2015.
  */
-public class Politician2Json {
+public class Model2Json {
 
     public JSONObject cand2Json(Candidate pol) {
         JSONObject jObj = new JSONObject();

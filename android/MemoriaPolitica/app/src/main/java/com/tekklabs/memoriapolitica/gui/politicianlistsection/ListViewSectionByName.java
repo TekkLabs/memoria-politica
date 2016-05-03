@@ -57,7 +57,10 @@ public class ListViewSectionByName implements ListViewSectionIndexer {
 
     @Override
     public int getSectionForPosition(int position) {
-        PoliticianClassification pol = politicians.toArray(new PoliticianClassification[0])[position];
+        if (position >= politicians.size()) {
+            position = politicians.size() - 1;
+        }
+        PoliticianClassification pol = politicians.get(position);
         String letter = pol.getPolitician().getPoliticianNameFirstLetter();
         return sections.indexOf(letter);
     }

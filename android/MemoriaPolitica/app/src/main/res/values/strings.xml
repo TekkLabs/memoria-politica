@@ -10,9 +10,9 @@
     <string name="action_sort_by_state">Por estado</string>
     <string name="action_sort_by_party">Por partido</string>
     <string name="action_sort_by_name">Por nome</string>
-    <string name="action_sort_by_approved_first">Aprovados primeiro</string>
-    <string name="action_sort_by_neutral_first">Neutros primeiro</string>
-    <string name="action_sort_by_reproved_first">Reprovados primeiro</string>
+    <string name="action_sort_by_approved_first">Por aprovados</string>
+    <string name="action_sort_by_neutral_first">Por neutros</string>
+    <string name="action_sort_by_reproved_first">Por reprovados</string>
     <string name="search_query_hint">Procure por políticos, partidos, estados, etc</string>
 
 </resources>

@@ -2,10 +2,10 @@ package com.tekklabs.memoriapolitica.gui;
 
 import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
@@ -26,7 +26,6 @@ import com.tekklabs.memoriapolitica.widget.radio.DeselectableRadioButton;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -58,14 +57,10 @@ public class PoliticianCardAdapter extends RecyclerView.Adapter<PoliticianCardAd
     public PoliticianCardAdapter(CitizenNotebook theNotebook) {
         this.notebook = theNotebook;
         politiciansToShow.addAll(notebook.getAllPoliticians(PoliticianClass.FED_DEP));
-        this.listSectionManager = new ListViewSectionManager(this.notebook);
+        this.listSectionManager = new ListViewSectionManager();
         this.listSectionManager.updatePoliticianList(politiciansToShow);
     }
-/*
-    public Collection<PoliticianClassification> getPoliticians() {
-        return Collections.unmodifiableCollection(politiciansToShow);
-    }
-*/
+
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater vi = LayoutInflater.from(parent.getContext());
@@ -79,7 +74,7 @@ public class PoliticianCardAdapter extends RecyclerView.Adapter<PoliticianCardAd
         Politician pol = polClassification.getPolitician();
 
         holder.polName.setText(pol.getPoliticianName());
-        holder.partyView.setText(pol.getParty().getAcronym() + " - " + pol.getUf());
+        holder.partyView.setText(Html.fromHtml("<b>" + pol.getParty().getAcronym() + "</b> - " + pol.getUf()));
         loadPhoto(polClassification, holder.photo);
         configureButtonLike(polClassification, holder.btnLike);
         configureButtonDislike(polClassification, holder.btnDislike);
@@ -165,7 +160,7 @@ public class PoliticianCardAdapter extends RecyclerView.Adapter<PoliticianCardAd
 
     public void sortItems(SortMode sortMode) {
         switch (sortMode) {
-            case BY_STATE:
+            case BY_UF:
                 Collections.sort(politiciansToShow, new ComparePoliticianByState());
                 break;
             case BY_PARTY:
@@ -186,5 +181,11 @@ public class PoliticianCardAdapter extends RecyclerView.Adapter<PoliticianCardAd
         listSectionManager.setSortMode(sortMode);
         listSectionManager.updatePoliticianList(politiciansToShow);
         notifyDataSetChanged();
+    }
+
+    public void setPoliticiansToShow(List<PoliticianClassification> politiciansToShow) {
+        this.politiciansToShow = politiciansToShow;
+        SortMode sortMode = listSectionManager.getCurrentSortMode();
+        sortItems(sortMode);
     }
 }

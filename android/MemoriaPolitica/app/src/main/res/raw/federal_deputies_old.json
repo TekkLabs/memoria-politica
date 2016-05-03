@@ -1,0 +1,3087 @@
+[
+  {
+    "status_key": "status",
+    "email_key": "email",
+    "party_key": "partido",
+    "cpf_key": "cpf"
+  },
+  
+  {
+    "status": "T",
+    "email": "dep.abelmesquitajr@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "18286585291"
+  },
+  {
+    "status": "T",
+    "email": "dep.adailcarneiro@camara.leg.br",
+    "partido": "PHS",
+    "cpf": "21048215334"
+  },
+  {
+    "status": "T",
+    "email": "dep.adalbertocavalcanti@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "12534773453"
+  },
+  {
+    "status": "S",
+    "email": "dep.adelmocarneiroleao@camara.leg.br",
+    "partido": "PT",
+    "cpf": "13929348691"
+  },
+  {
+    "status": "T",
+    "email": "dep.adelsonbarreto@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "23625678500"
+  },
+  {
+    "status": "S",
+    "email": "dep.ademircamilo@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "48704300610"
+  },
+  {
+    "status": "T",
+    "email": "dep.adiltonsachetti@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "45360707968"
+  },
+  {
+    "status": "T",
+    "email": "dep.aeltonfreitas@camara.leg.br",
+    "partido": "PR",
+    "cpf": "36179140634"
+  },
+  {
+    "status": "T",
+    "email": "dep.afonsoflorence@camara.leg.br",
+    "partido": "PT",
+    "cpf": "17734150500"
+  },
+  {
+    "status": "T",
+    "email": "dep.afonsohamm@camara.leg.br",
+    "partido": "PP",
+    "cpf": "37040642034"
+  },
+  {
+    "status": "T",
+    "email": "dep.afonsomotta@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "10777296004"
+  },
+  {
+    "status": "T",
+    "email": "dep.aguinaldoribeiro@camara.leg.br",
+    "partido": "PP",
+    "cpf": "51921146400"
+  },
+  {
+    "status": "T",
+    "email": "dep.alanrick@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "44726570234"
+  },
+  {
+    "status": "T",
+    "email": "dep.albertofilho@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "00975696319"
+  },
+  {
+    "status": "T",
+    "email": "dep.albertofraga@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "11939141168"
+  },
+  {
+    "status": "T",
+    "email": "dep.alceumoreira@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "17968496004"
+  },
+  {
+    "status": "T",
+    "email": "dep.alessandromolon@camara.leg.br",
+    "partido": "PT",
+    "cpf": "01416576770"
+  },
+  {
+    "status": "T",
+    "email": "dep.alexcanziani@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "36601101915"
+  },
+  {
+    "status": "T",
+    "email": "dep.alexmanente@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "26838194805"
+  },
+  {
+    "status": "T",
+    "email": "dep.alexandrebaldy@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "87342235172"
+  },
+  {
+    "status": "T",
+    "email": "dep.alexandreleite@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "22970812860"
+  },
+  {
+    "status": "T",
+    "email": "dep.alexandreserfiotis@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "02440200786"
+  },
+  {
+    "status": "T",
+    "email": "dep.alexandrevalle@camara.leg.br",
+    "partido": "PRP",
+    "cpf": "01486095704"
+  },
+  {
+    "status": "T",
+    "email": "dep.alfredokaefer@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "24106305968"
+  },
+  {
+    "status": "T",
+    "email": "dep.alfredonascimento@camara.leg.br",
+    "partido": "PR",
+    "cpf": "05727600430"
+  },
+  {
+    "status": "T",
+    "email": "dep.aliceportugal@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "12377392504"
+  },
+  {
+    "status": "T",
+    "email": "dep.alielmachado@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "06908052923"
+  },
+  {
+    "status": "T",
+    "email": "dep.altineucortes@camara.leg.br",
+    "partido": "PR",
+    "cpf": "00007487738"
+  },
+  {
+    "status": "T",
+    "email": "dep.aluisiomendes@camara.leg.br",
+    "partido": "PSDC",
+    "cpf": "66746485749"
+  },
+  {
+    "status": "T",
+    "email": "dep.anaperugini@camara.leg.br",
+    "partido": "PT",
+    "cpf": "07542896806"
+  },
+  {
+    "status": "T",
+    "email": "dep.andersonferreira@camara.leg.br",
+    "partido": "PR",
+    "cpf": "82501173449"
+  },
+  {
+    "status": "T",
+    "email": "dep.andreabdon@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "31601928220"
+  },
+  {
+    "status": "T",
+    "email": "dep.andrefigueiredo@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "25905503320"
+  },
+  {
+    "status": "T",
+    "email": "dep.andrefufuca@camara.leg.br",
+    "partido": "PEN",
+    "cpf": "03950788301"
+  },
+  {
+    "status": "T",
+    "email": "dep.andremoura@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "55686176515"
+  },
+  {
+    "status": "T",
+    "email": "dep.andressanchez@camara.leg.br",
+    "partido": "PT",
+    "cpf": "07078570820"
+  },
+  {
+    "status": "T",
+    "email": "dep.angelim@camara.leg.br",
+    "partido": "PT",
+    "cpf": "02820935249"
+  },
+  {
+    "status": "T",
+    "email": "dep.anibalgomes@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "04240952387"
+  },
+  {
+    "status": "T",
+    "email": "dep.antoniobalhmann@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "05993601353"
+  },
+  {
+    "status": "T",
+    "email": "dep.antoniobrito@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "51488868549"
+  },
+  {
+    "status": "T",
+    "email": "dep.antoniobulhoes@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "00335868703"
+  },
+  {
+    "status": "S",
+    "email": "dep.antoniocarlosmendesthame@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "20849893887"
+  },
+  {
+    "status": "T",
+    "email": "dep.antonioimbassahy@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "02372967568"
+  },
+  {
+    "status": "T",
+    "email": "dep.antoniojacome@camara.leg.br",
+    "partido": "PMN",
+    "cpf": "35843225453"
+  },
+  {
+    "status": "T",
+    "email": "dep.arlindochinaglia@camara.leg.br",
+    "partido": "PT",
+    "cpf": "06821146187"
+  },
+  {
+    "status": "T",
+    "email": "dep.arnaldofariadesa@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "21911452800"
+  },
+  {
+    "status": "T",
+    "email": "dep.arnaldojordy@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "21062862287"
+  },
+  {
+    "status": "T",
+    "email": "dep.arnonbezerra@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "11575646315"
+  },
+  {
+    "status": "T",
+    "email": "dep.arthurlira@camara.leg.br",
+    "partido": "PP",
+    "cpf": "67821090425"
+  },
+  {
+    "status": "T",
+    "email": "dep.arthuroliveiramaia@camara.leg.br",
+    "partido": "SD",
+    "cpf": "32604637553"
+  },
+  {
+    "status": "T",
+    "email": "dep.arthurvirgiliobisneto@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "64264246253"
+  },
+  {
+    "status": "T",
+    "email": "dep.assiscarvalho@camara.leg.br",
+    "partido": "PT",
+    "cpf": "15670961315"
+  },
+  {
+    "status": "T",
+    "email": "dep.assisdocouto@camara.leg.br",
+    "partido": "PT",
+    "cpf": "39479471949"
+  },
+  {
+    "status": "T",
+    "email": "dep.atilalins@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "00694584215"
+  },
+  {
+    "status": "T",
+    "email": "dep.atilalira@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "13023594600"
+  },
+  {
+    "status": "T",
+    "email": "dep.augustocarvalho@camara.leg.br",
+    "partido": "SD",
+    "cpf": "06796478134"
+  },
+  {
+    "status": "S",
+    "email": "dep.augustocoutinho@camara.leg.br",
+    "partido": "SD",
+    "cpf": "33155623420"
+  },
+  {
+    "status": "T",
+    "email": "dep.aureo@camara.leg.br",
+    "partido": "SD",
+    "cpf": "05355525725"
+  },
+  {
+    "status": "T",
+    "email": "dep.bacelar@camara.leg.br",
+    "partido": "PTN",
+    "cpf": "10626409500"
+  },
+  {
+    "status": "T",
+    "email": "dep.baleiarossi@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "17816724829"
+  },
+  {
+    "status": "T",
+    "email": "dep.bebeto@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "21879869500"
+  },
+  {
+    "status": "T",
+    "email": "dep.beneditadasilva@camara.leg.br",
+    "partido": "PT",
+    "cpf": "36293334787"
+  },
+  {
+    "status": "T",
+    "email": "dep.benitogama@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "02664763504"
+  },
+  {
+    "status": "T",
+    "email": "dep.benjaminmaranhao@camara.leg.br",
+    "partido": "SD",
+    "cpf": "80517587491"
+  },
+  {
+    "status": "T",
+    "email": "dep.betinhogomes@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "02008488446"
+  },
+  {
+    "status": "T",
+    "email": "dep.betofaro@camara.leg.br",
+    "partido": "PT",
+    "cpf": "40070565287"
+  },
+  {
+    "status": "T",
+    "email": "dep.betomansur@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "73255319820"
+  },
+  {
+    "status": "T",
+    "email": "dep.betorosado@camara.leg.br",
+    "partido": "PP",
+    "cpf": "01195625456"
+  },
+  {
+    "status": "T",
+    "email": "dep.betosalame@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "41108647200"
+  },
+  {
+    "status": "T",
+    "email": "dep.bilacpinto@camara.leg.br",
+    "partido": "PR",
+    "cpf": "45561699687"
+  },
+  {
+    "status": "T",
+    "email": "dep.bohngass@camara.leg.br",
+    "partido": "PT",
+    "cpf": "12558206249"
+  },
+  {
+    "status": "T",
+    "email": "dep.bonifaciodeandrada@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "00352748672"
+  },
+  {
+    "status": "T",
+    "email": "dep.brunafurlan@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "31516410831"
+  },
+  {
+    "status": "T",
+    "email": "dep.brunny@camara.leg.br",
+    "partido": "PTC",
+    "cpf": "10931760674"
+  },
+  {
+    "status": "T",
+    "email": "dep.brunoaraujo@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "73467260497"
+  },
+  {
+    "status": "T",
+    "email": "dep.brunocovas@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "22037584814"
+  },
+  {
+    "status": "T",
+    "email": "dep.cabodaciolo@camara.leg.br",
+    "partido": "S.PART.",
+    "cpf": "19686111859"
+  },
+  {
+    "status": "T",
+    "email": "dep.cabosabino@camara.leg.br",
+    "partido": "PR",
+    "cpf": "39230104353"
+  },
+  {
+    "status": "T",
+    "email": "dep.cabucuborges@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "18931367287"
+  },
+  {
+    "status": "T",
+    "email": "dep.cacaleao@camara.leg.br",
+    "partido": "PP",
+    "cpf": "79753566549"
+  },
+  {
+    "status": "T",
+    "email": "dep.caetano@camara.leg.br",
+    "partido": "PT",
+    "cpf": "07409419504"
+  },
+  {
+    "status": "T",
+    "email": "dep.caionarcio@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "01338190601"
+  },
+  {
+    "status": "T",
+    "email": "dep.capitaoaugusto@camara.leg.br",
+    "partido": "PR",
+    "cpf": "05750251829"
+  },
+  {
+    "status": "T",
+    "email": "dep.carlosandrade@camara.leg.br",
+    "partido": "PHS",
+    "cpf": "18015662249"
+  },
+  {
+    "status": "T",
+    "email": "dep.carlosbezerra@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "00834939134"
+  },
+  {
+    "status": "S",
+    "email": "dep.carloseduardocadoca@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "00230685404"
+  },
+  {
+    "status": "T",
+    "email": "dep.carlosgomes@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "02142743730"
+  },
+  {
+    "status": "T",
+    "email": "dep.carloshenriquegaguim@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "21944202153"
+  },
+  {
+    "status": "T",
+    "email": "dep.carlosmanato@camara.leg.br",
+    "partido": "SD",
+    "cpf": "57480788720"
+  },
+  {
+    "status": "T",
+    "email": "dep.carlosmarun@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "40858545004"
+  },
+  {
+    "status": "T",
+    "email": "dep.carlosmelles@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "15868982649"
+  },
+  {
+    "status": "T",
+    "email": "dep.carlossampaio@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "06197277808"
+  },
+  {
+    "status": "T",
+    "email": "dep.carloszarattini@camara.leg.br",
+    "partido": "PT",
+    "cpf": "00398099863"
+  },
+  {
+    "status": "T",
+    "email": "dep.carmenzanotto@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "51434245934"
+  },
+  {
+    "status": "T",
+    "email": "dep.celiosilveira@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "24453706120"
+  },
+  {
+    "status": "S",
+    "email": "dep.celsojacob@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "38108216753"
+  },
+  {
+    "status": "T",
+    "email": "dep.celsomaldaner@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "18270522953"
+  },
+  {
+    "status": "T",
+    "email": "dep.celsopansera@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "47712244987"
+  },
+  {
+    "status": "T",
+    "email": "dep.celsorussomanno@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "01252958803"
+  },
+  {
+    "status": "T",
+    "email": "dep.cesarhalum@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "08584060120"
+  },
+  {
+    "status": "T",
+    "email": "dep.cesarmessias@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "50872060772"
+  },
+  {
+    "status": "T",
+    "email": "dep.cesarsouza@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "28951107949"
+  },
+  {
+    "status": "T",
+    "email": "dep.chicoalencar@camara.leg.br",
+    "partido": "PSOL",
+    "cpf": "26451379700"
+  },
+  {
+    "status": "T",
+    "email": "dep.chicodangelo@camara.leg.br",
+    "partido": "PT",
+    "cpf": "47247436700"
+  },
+  {
+    "status": "T",
+    "email": "dep.chicolopes@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "02810905304"
+  },
+  {
+    "status": "T",
+    "email": "dep.christianedesouzayared@camara.leg.br",
+    "partido": "PTN",
+    "cpf": "49156470991"
+  },
+  {
+    "status": "T",
+    "email": "dep.ciceroalmeida@camara.leg.br",
+    "partido": "PRTB",
+    "cpf": "12941514449"
+  },
+  {
+    "status": "T",
+    "email": "dep.clarissagarotinho@camara.leg.br",
+    "partido": "PR",
+    "cpf": "09598289745"
+  },
+  {
+    "status": "T",
+    "email": "dep.claudiocajado@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "29474485534"
+  },
+  {
+    "status": "T",
+    "email": "dep.cleberverde@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "48357600344"
+  },
+  {
+    "status": "T",
+    "email": "dep.conceicaosampaio@camara.leg.br",
+    "partido": "PP",
+    "cpf": "23934409253"
+  },
+  {
+    "status": "T",
+    "email": "dep.covattifilho@camara.leg.br",
+    "partido": "PP",
+    "cpf": "01171688075"
+  },
+  {
+    "status": "T",
+    "email": "dep.cristianebrasil@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "03625801701"
+  },
+  {
+    "status": "T",
+    "email": "dep.dagoberto@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "00263382893"
+  },
+  {
+    "status": "T",
+    "email": "dep.damiaofeliciano@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "13932772415"
+  },
+  {
+    "status": "T",
+    "email": "dep.daminapereira@camara.leg.br",
+    "partido": "PMN",
+    "cpf": "85490750600"
+  },
+  {
+    "status": "T",
+    "email": "dep.danielalmeida@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "07894090549"
+  },
+  {
+    "status": "T",
+    "email": "dep.danielcoelho@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "02513878442"
+  },
+  {
+    "status": "T",
+    "email": "dep.danielvilela@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "98166638134"
+  },
+  {
+    "status": "T",
+    "email": "dep.daniloforte@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "12133728368"
+  },
+  {
+    "status": "T",
+    "email": "dep.danrleidedeushinterholz@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "70157324087"
+  },
+  {
+    "status": "T",
+    "email": "dep.darcisioperondi@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "08262748034"
+  },
+  {
+    "status": "S",
+    "email": "dep.davidsonmagalhaes@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "18281702591"
+  },
+  {
+    "status": "T",
+    "email": "dep.deciolima@camara.leg.br",
+    "partido": "PT",
+    "cpf": "38858240944"
+  },
+  {
+    "status": "T",
+    "email": "dep.delegadoedermauro@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "13405551234"
+  },
+  {
+    "status": "T",
+    "email": "dep.delegadoedsonmoreira@camara.leg.br",
+    "partido": "PTN",
+    "cpf": "22063625115"
+  },
+  {
+    "status": "T",
+    "email": "dep.delegadowaldir@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "46228357972"
+  },
+  {
+    "status": "T",
+    "email": "dep.deley@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "53002440744"
+  },
+  {
+    "status": "T",
+    "email": "dep.diegoandrade@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "99316552672"
+  },
+  {
+    "status": "T",
+    "email": "dep.diegogarcia@camara.leg.br",
+    "partido": "PHS",
+    "cpf": "04702291955"
+  },
+  {
+    "status": "T",
+    "email": "dep.dilceusperafico@camara.leg.br",
+    "partido": "PP",
+    "cpf": "11979216991"
+  },
+  {
+    "status": "T",
+    "email": "dep.dimasfabiano@camara.leg.br",
+    "partido": "PP",
+    "cpf": "03694339639"
+  },
+  {
+    "status": "T",
+    "email": "dep.domingosneto@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "02827898390"
+  },
+  {
+    "status": "T",
+    "email": "dep.domingossavio@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "22275150668"
+  },
+  {
+    "status": "T",
+    "email": "dep.dr.joao@camara.leg.br",
+    "partido": "PR",
+    "cpf": "26144735704"
+  },
+  {
+    "status": "T",
+    "email": "dep.dr.jorgesilva@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "36406341791"
+  },
+  {
+    "status": "T",
+    "email": "dep.dr.sinvalmalheiros@camara.leg.br",
+    "partido": "PV",
+    "cpf": "88779254853"
+  },
+  {
+    "status": "T",
+    "email": "dep.dulcemiranda@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "30217865100"
+  },
+  {
+    "status": "S",
+    "email": "dep.edinhobez@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "09629734915"
+  },
+  {
+    "status": "T",
+    "email": "dep.ediolopes@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "77548981872"
+  },
+  {
+    "status": "T",
+    "email": "dep.edmararruda@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "32563914949"
+  },
+  {
+    "status": "T",
+    "email": "dep.edmilsonrodrigues@camara.leg.br",
+    "partido": "PSOL",
+    "cpf": "09006826200"
+  },
+  {
+    "status": "T",
+    "email": "dep.eduardobarbosa@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "27582400682"
+  },
+  {
+    "status": "T",
+    "email": "dep.eduardobolsonaro@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "10655365770"
+  },
+  {
+    "status": "T",
+    "email": "dep.eduardocunha@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "50447971700"
+  },
+  {
+    "status": "T",
+    "email": "dep.eduardocury@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "04909670866"
+  },
+  {
+    "status": "T",
+    "email": "dep.eduardodafonte@camara.leg.br",
+    "partido": "PP",
+    "cpf": "53467108415"
+  },
+  {
+    "status": "T",
+    "email": "dep.efraimfilho@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "00770338410"
+  },
+  {
+    "status": "T",
+    "email": "dep.elcionebarbalho@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "00605387249"
+  },
+  {
+    "status": "T",
+    "email": "dep.elicorreafilho@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "17610241830"
+  },
+  {
+    "status": "S",
+    "email": "dep.elizeudionizio@camara.leg.br",
+    "partido": "SD",
+    "cpf": "69912645120"
+  },
+  {
+    "status": "T",
+    "email": "dep.elizianegama@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "75242788372"
+  },
+  {
+    "status": "T",
+    "email": "dep.elmarnascimento@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "49465589500"
+  },
+  {
+    "status": "T",
+    "email": "dep.enioverri@camara.leg.br",
+    "partido": "PT",
+    "cpf": "39737705904"
+  },
+  {
+    "status": "T",
+    "email": "dep.erikakokay@camara.leg.br",
+    "partido": "PT",
+    "cpf": "22441107100"
+  },
+  {
+    "status": "T",
+    "email": "dep.eriveltonsantana@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "22989250549"
+  },
+  {
+    "status": "T",
+    "email": "dep.erosbiondini@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "84470666653"
+  },
+  {
+    "status": "T",
+    "email": "dep.esperidiaoamin@camara.leg.br",
+    "partido": "PP",
+    "cpf": "11268786934"
+  },
+  {
+    "status": "T",
+    "email": "dep.evairdemelo@camara.leg.br",
+    "partido": "PV",
+    "cpf": "02261265794"
+  },
+  {
+    "status": "T",
+    "email": "dep.evandrogussi@camara.leg.br",
+    "partido": "PV",
+    "cpf": "29424929889"
+  },
+  {
+    "status": "T",
+    "email": "dep.evandroroman@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "86979728920"
+  },
+  {
+    "status": "T",
+    "email": "dep.expeditonetto@camara.leg.br",
+    "partido": "SD",
+    "cpf": "93279493234"
+  },
+  {
+    "status": "T",
+    "email": "dep.ezequielfonseca@camara.leg.br",
+    "partido": "PP",
+    "cpf": "04707960812"
+  },
+  {
+    "status": "T",
+    "email": "dep.ezequielteixeira@camara.leg.br",
+    "partido": "SD",
+    "cpf": "37476769791"
+  },
+  {
+    "status": "T",
+    "email": "dep.fabiofaria@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "02128728428"
+  },
+  {
+    "status": "T",
+    "email": "dep.fabiogarcia@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "65165870197"
+  },
+  {
+    "status": "T",
+    "email": "dep.fabiomitidieri@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "65242777591"
+  },
+  {
+    "status": "T",
+    "email": "dep.fabioramalho@camara.leg.br",
+    "partido": "PV",
+    "cpf": "54471788604"
+  },
+  {
+    "status": "T",
+    "email": "dep.fabioreis@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "57126500378"
+  },
+  {
+    "status": "T",
+    "email": "dep.fabiosousa@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "98156012100"
+  },
+  {
+    "status": "T",
+    "email": "dep.faustopinato@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "28022995819"
+  },
+  {
+    "status": "T",
+    "email": "dep.felipebornier@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "07421725709"
+  },
+  {
+    "status": "T",
+    "email": "dep.felipemaia@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "91644372487"
+  },
+  {
+    "status": "T",
+    "email": "dep.felixmendoncajunior@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "24263630530"
+  },
+  {
+    "status": "T",
+    "email": "dep.fernandocoelhofilho@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "04921093466"
+  },
+  {
+    "status": "T",
+    "email": "dep.fernandofrancischini@camara.leg.br",
+    "partido": "SD",
+    "cpf": "74019961972"
+  },
+  {
+    "status": "T",
+    "email": "dep.fernandojordao@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "49752839720"
+  },
+  {
+    "status": "S",
+    "email": "dep.fernandomarroni@camara.leg.br",
+    "partido": "PT",
+    "cpf": "21891583034"
+  },
+  {
+    "status": "S",
+    "email": "dep.fernandomonteiro@camara.leg.br",
+    "partido": "PP",
+    "cpf": "83146270463"
+  },
+  {
+    "status": "S",
+    "email": "dep.fernandotorres@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "40914771515"
+  },
+  {
+    "status": "T",
+    "email": "dep.flaviamorais@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "54779537134"
+  },
+  {
+    "status": "T",
+    "email": "dep.flavianomelo@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "33251797700"
+  },
+  {
+    "status": "T",
+    "email": "dep.flavinho@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "10965933865"
+  },
+  {
+    "status": "T",
+    "email": "dep.franciscochapadinha@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "08073961334"
+  },
+  {
+    "status": "T",
+    "email": "dep.franciscofloriano@camara.leg.br",
+    "partido": "PR",
+    "cpf": "54984670797"
+  },
+  {
+    "status": "T",
+    "email": "dep.gabrielguimaraes@camara.leg.br",
+    "partido": "PT",
+    "cpf": "06313474619"
+  },
+  {
+    "status": "T",
+    "email": "dep.geneciasnoronha@camara.leg.br",
+    "partido": "SD",
+    "cpf": "25630512315"
+  },
+  {
+    "status": "T",
+    "email": "dep.geovaniadesa@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "81095910949"
+  },
+  {
+    "status": "T",
+    "email": "dep.geraldoresende@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "12896918191"
+  },
+  {
+    "status": "T",
+    "email": "dep.giacobo@camara.leg.br",
+    "partido": "PR",
+    "cpf": "71827404949"
+  },
+  {
+    "status": "T",
+    "email": "dep.gilbertonascimento@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "64817407891"
+  },
+  {
+    "status": "T",
+    "email": "dep.giovanicherini@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "31050778049"
+  },
+  {
+    "status": "T",
+    "email": "dep.giuseppevecci@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "18692141100"
+  },
+  {
+    "status": "T",
+    "email": "dep.givaldocarimbao@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "10270060510"
+  },
+  {
+    "status": "T",
+    "email": "dep.givaldovieira@camara.leg.br",
+    "partido": "PT",
+    "cpf": "98767232787"
+  },
+  {
+    "status": "T",
+    "email": "dep.glauberbraga@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "09740756719"
+  },
+  {
+    "status": "T",
+    "email": "dep.gonzagapatriota@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "01960970453"
+  },
+  {
+    "status": "T",
+    "email": "dep.goretepereira@camara.leg.br",
+    "partido": "PR",
+    "cpf": "08187452315"
+  },
+  {
+    "status": "T",
+    "email": "dep.goulart@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "76026329820"
+  },
+  {
+    "status": "T",
+    "email": "dep.guilhermemussi@camara.leg.br",
+    "partido": "PP",
+    "cpf": "31812472862"
+  },
+  {
+    "status": "T",
+    "email": "dep.heitorschuch@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "45479453068"
+  },
+  {
+    "status": "T",
+    "email": "dep.heldersalomao@camara.leg.br",
+    "partido": "PT",
+    "cpf": "76808742715"
+  },
+  {
+    "status": "T",
+    "email": "dep.helioleite@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "08575878204"
+  },
+  {
+    "status": "T",
+    "email": "dep.henriquefontana@camara.leg.br",
+    "partido": "PT",
+    "cpf": "33410518053"
+  },
+  {
+    "status": "T",
+    "email": "dep.heraclitofortes@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "06342850410"
+  },
+  {
+    "status": "T",
+    "email": "dep.herculanopassos@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "00551632895"
+  },
+  {
+    "status": "T",
+    "email": "dep.hermesparcianello@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "33496315920"
+  },
+  {
+    "status": "T",
+    "email": "dep.heulercruvinel@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "71059733153"
+  },
+  {
+    "status": "T",
+    "email": "dep.hildorocha@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "17571243300"
+  },
+  {
+    "status": "T",
+    "email": "dep.hirangoncalves@camara.leg.br",
+    "partido": "PMN",
+    "cpf": "14997169234"
+  },
+  {
+    "status": "T",
+    "email": "dep.hissaabrahao@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "64440249272"
+  },
+  {
+    "status": "T",
+    "email": "dep.hugoleal@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "41365585620"
+  },
+  {
+    "status": "T",
+    "email": "dep.hugomotta@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "04796249419"
+  },
+  {
+    "status": "T",
+    "email": "dep.indiodacosta@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "00405819773"
+  },
+  {
+    "status": "T",
+    "email": "dep.iracemaportella@camara.leg.br",
+    "partido": "PP",
+    "cpf": "37311638372"
+  },
+  {
+    "status": "T",
+    "email": "dep.irajaabreu@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "60507306104"
+  },
+  {
+    "status": "T",
+    "email": "dep.irmaolazaro@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "30942608534"
+  },
+  {
+    "status": "T",
+    "email": "dep.ivanvalente@camara.leg.br",
+    "partido": "PSOL",
+    "cpf": "37655582815"
+  },
+  {
+    "status": "T",
+    "email": "dep.izalci@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "06801480197"
+  },
+  {
+    "status": "T",
+    "email": "dep.jaimemartins@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "17614899687"
+  },
+  {
+    "status": "T",
+    "email": "dep.jairbolsonaro@camara.leg.br",
+    "partido": "PP",
+    "cpf": "45317828791"
+  },
+  {
+    "status": "T",
+    "email": "dep.jandirafeghali@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "43428169700"
+  },
+  {
+    "status": "T",
+    "email": "dep.janetecapiberibe@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "18085830272"
+  },
+  {
+    "status": "T",
+    "email": "dep.jarbasvasconcelos@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "00105457434"
+  },
+  {
+    "status": "T",
+    "email": "dep.jeanwyllys@camara.leg.br",
+    "partido": "PSOL",
+    "cpf": "59919230510"
+  },
+  {
+    "status": "T",
+    "email": "dep.jeffersoncampos@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "02684165831"
+  },
+  {
+    "status": "T",
+    "email": "dep.jeronimogoergen@camara.leg.br",
+    "partido": "PP",
+    "cpf": "73441040082"
+  },
+  {
+    "status": "T",
+    "email": "dep.jessicasales@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "65595564253"
+  },
+  {
+    "status": "T",
+    "email": "dep.jhc@camara.leg.br",
+    "partido": "SD",
+    "cpf": "01117690199"
+  },
+  {
+    "status": "T",
+    "email": "dep.jhonatandejesus@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "74274112268"
+  },
+  {
+    "status": "T",
+    "email": "dep.jomoraes@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "51243946687"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaoarruda@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "02105687989"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaocampos@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "24254401191"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaocarlosbacelar@camara.leg.br",
+    "partido": "PR",
+    "cpf": "15345931879"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaocastelo@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "00035530278"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaodaniel@camara.leg.br",
+    "partido": "PT",
+    "cpf": "51625091591"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaoderly@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "81031254072"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaofernandocoutinho@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "03057911412"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaogualberto@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "88540405849"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaomarcelosouza@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "61956384120"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaopaulopapa@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "01792010850"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaorodrigues@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "23278951387"
+  },
+  {
+    "status": "T",
+    "email": "dep.joaquimpassarinho@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "13606328249"
+  },
+  {
+    "status": "T",
+    "email": "dep.jonymarcos@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "69430748149"
+  },
+  {
+    "status": "T",
+    "email": "dep.jorgeboeira@camara.leg.br",
+    "partido": "PP",
+    "cpf": "24620262900"
+  },
+  {
+    "status": "T",
+    "email": "dep.jorgecortereal@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "07038089404"
+  },
+  {
+    "status": "T",
+    "email": "dep.jorgesolla@camara.leg.br",
+    "partido": "PT",
+    "cpf": "19530773587"
+  },
+  {
+    "status": "T",
+    "email": "dep.jorgetadeumudalen@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "95663223800"
+  },
+  {
+    "status": "T",
+    "email": "dep.jorginhomello@camara.leg.br",
+    "partido": "PR",
+    "cpf": "25084119904"
+  },
+  {
+    "status": "T",
+    "email": "dep.joseairtoncirilo@camara.leg.br",
+    "partido": "PT",
+    "cpf": "09257357368"
+  },
+  {
+    "status": "T",
+    "email": "dep.josecarlosaleluia@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "01782037500"
+  },
+  {
+    "status": "T",
+    "email": "dep.josecarlosaraujo@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "04820991515"
+  },
+  {
+    "status": "S",
+    "email": "dep.josefogaca@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "06301525000"
+  },
+  {
+    "status": "T",
+    "email": "dep.joseguimaraes@camara.leg.br",
+    "partido": "PT",
+    "cpf": "09324577387"
+  },
+  {
+    "status": "S",
+    "email": "dep.josemaiafilho@camara.leg.br",
+    "partido": "SD",
+    "cpf": "70258635304"
+  },
+  {
+    "status": "T",
+    "email": "dep.josementor@camara.leg.br",
+    "partido": "PT",
+    "cpf": "53455843891"
+  },
+  {
+    "status": "T",
+    "email": "dep.josenunes@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "04653580553"
+  },
+  {
+    "status": "T",
+    "email": "dep.joseotaviogermano@camara.leg.br",
+    "partido": "PP",
+    "cpf": "36447374015"
+  },
+  {
+    "status": "T",
+    "email": "dep.josepriante@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "17293618204"
+  },
+  {
+    "status": "T",
+    "email": "dep.josereinaldo@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "00138754349"
+  },
+  {
+    "status": "T",
+    "email": "dep.joserocha@camara.leg.br",
+    "partido": "PR",
+    "cpf": "04789113515"
+  },
+  {
+    "status": "T",
+    "email": "dep.josestedile@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "29446376068"
+  },
+  {
+    "status": "T",
+    "email": "dep.josinunes@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "28884329191"
+  },
+  {
+    "status": "T",
+    "email": "dep.josuebengtson@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "09673504768"
+  },
+  {
+    "status": "T",
+    "email": "dep.jovairarantes@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "04035976172"
+  },
+  {
+    "status": "T",
+    "email": "dep.jozirocha@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "61350451215"
+  },
+  {
+    "status": "T",
+    "email": "dep.juliamarinho@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "10799397253"
+  },
+  {
+    "status": "T",
+    "email": "dep.juliocesar@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "01102125334"
+  },
+  {
+    "status": "T",
+    "email": "dep.juliodelgado@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "81993358668"
+  },
+  {
+    "status": "T",
+    "email": "dep.juliolopes@camara.leg.br",
+    "partido": "PP",
+    "cpf": "59245220753"
+  },
+  {
+    "status": "T",
+    "email": "dep.juniormarreca@camara.leg.br",
+    "partido": "PEN",
+    "cpf": "35491744387"
+  },
+  {
+    "status": "T",
+    "email": "dep.juscelinofilho@camara.leg.br",
+    "partido": "PRP",
+    "cpf": "85290211349"
+  },
+  {
+    "status": "T",
+    "email": "dep.jutahyjunior@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "10660410591"
+  },
+  {
+    "status": "T",
+    "email": "dep.kaiomanicoba@camara.leg.br",
+    "partido": "PHS",
+    "cpf": "05017868488"
+  },
+  {
+    "status": "T",
+    "email": "dep.keikoota@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "05528227879"
+  },
+  {
+    "status": "T",
+    "email": "dep.laerciooliveira@camara.leg.br",
+    "partido": "SD",
+    "cpf": "16853881400"
+  },
+  {
+    "status": "T",
+    "email": "dep.laertebessa@camara.leg.br",
+    "partido": "PR",
+    "cpf": "09511172115"
+  },
+  {
+    "status": "T",
+    "email": "dep.laudiviocarvalho@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "40480470600"
+  },
+  {
+    "status": "T",
+    "email": "dep.lazarobotelho@camara.leg.br",
+    "partido": "PP",
+    "cpf": "04984846100"
+  },
+  {
+    "status": "T",
+    "email": "dep.leandre@camara.leg.br",
+    "partido": "PV",
+    "cpf": "80635083949"
+  },
+  {
+    "status": "T",
+    "email": "dep.lelocoimbra@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "34318100715"
+  },
+  {
+    "status": "T",
+    "email": "dep.leodebrito@camara.leg.br",
+    "partido": "PT",
+    "cpf": "63182246291"
+  },
+  {
+    "status": "T",
+    "email": "dep.leonardomonteiro@camara.leg.br",
+    "partido": "PT",
+    "cpf": "20811845672"
+  },
+  {
+    "status": "T",
+    "email": "dep.leonardopicciani@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "08436066731"
+  },
+  {
+    "status": "T",
+    "email": "dep.leonardoquintao@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "79043607649"
+  },
+  {
+    "status": "T",
+    "email": "dep.leonidascristino@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "12105961304"
+  },
+  {
+    "status": "T",
+    "email": "dep.leopoldomeyer@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "13917315904"
+  },
+  {
+    "status": "T",
+    "email": "dep.lincolnportela@camara.leg.br",
+    "partido": "PR",
+    "cpf": "10254730191"
+  },
+  {
+    "status": "T",
+    "email": "dep.lindomargarcon@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "32550685253"
+  },
+  {
+    "status": "S",
+    "email": "dep.lobbeneto@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "05929116830"
+  },
+  {
+    "status": "T",
+    "email": "dep.lucasvergilio@camara.leg.br",
+    "partido": "SD",
+    "cpf": "01745455175"
+  },
+  {
+    "status": "T",
+    "email": "dep.lucianasantos@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "80919979491"
+  },
+  {
+    "status": "T",
+    "email": "dep.lucianoducci@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "20732376068"
+  },
+  {
+    "status": "T",
+    "email": "dep.luciomosquini@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "28649923291"
+  },
+  {
+    "status": "T",
+    "email": "dep.luciovale@camara.leg.br",
+    "partido": "PR",
+    "cpf": "32205252291"
+  },
+  {
+    "status": "T",
+    "email": "dep.luciovieiralima@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "28925491168"
+  },
+  {
+    "status": "T",
+    "email": "dep.luiscarlosheinze@camara.leg.br",
+    "partido": "PP",
+    "cpf": "14272954091"
+  },
+  {
+    "status": "T",
+    "email": "dep.luistibe@camara.leg.br",
+    "partido": "PTdoB",
+    "cpf": "81460910672"
+  },
+  {
+    "status": "T",
+    "email": "dep.luizcarlosbusato@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "05698960020"
+  },
+  {
+    "status": "T",
+    "email": "dep.luizcarloshauly@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "08682607972"
+  },
+  {
+    "status": "T",
+    "email": "dep.luizcarlosramos@camara.leg.br",
+    "partido": "PSDC",
+    "cpf": "43087787787"
+  },
+  {
+    "status": "T",
+    "email": "dep.luizclaudio@camara.leg.br",
+    "partido": "PR",
+    "cpf": "23878525400"
+  },
+  {
+    "status": "T",
+    "email": "dep.luizcouto@camara.leg.br",
+    "partido": "PT",
+    "cpf": "02043033468"
+  },
+  {
+    "status": "T",
+    "email": "dep.luizfernandofaria@camara.leg.br",
+    "partido": "PP",
+    "cpf": "30736250620"
+  },
+  {
+    "status": "T",
+    "email": "dep.luizlaurofilho@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "27290596870"
+  },
+  {
+    "status": "T",
+    "email": "dep.luiznishimori@camara.leg.br",
+    "partido": "PR",
+    "cpf": "08781460910"
+  },
+  {
+    "status": "T",
+    "email": "dep.luizsergio@camara.leg.br",
+    "partido": "PT",
+    "cpf": "44910614753"
+  },
+  {
+    "status": "T",
+    "email": "dep.luizaerundina@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "00480584400"
+  },
+  {
+    "status": "T",
+    "email": "dep.luiziannelins@camara.leg.br",
+    "partido": "PT",
+    "cpf": "38208563315"
+  },
+  {
+    "status": "T",
+    "email": "dep.macedo@camara.leg.br",
+    "partido": "PSL",
+    "cpf": "19705786453"
+  },
+  {
+    "status": "T",
+    "email": "dep.magdamofatto@camara.leg.br",
+    "partido": "PR",
+    "cpf": "13205285115"
+  },
+  {
+    "status": "T",
+    "email": "dep.majorolimpio@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "00502302801"
+  },
+  {
+    "status": "T",
+    "email": "dep.mandetta@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "51942143168"
+  },
+  {
+    "status": "T",
+    "email": "dep.manoeljunior@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "40902650459"
+  },
+  {
+    "status": "T",
+    "email": "dep.maragabrilli@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "24731270855"
+  },
+  {
+    "status": "S",
+    "email": "dep.marceloaguiar@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "19522116890"
+  },
+  {
+    "status": "T",
+    "email": "dep.marceloalvaroantonio@camara.leg.br",
+    "partido": "PRP",
+    "cpf": "00649039661"
+  },
+  {
+    "status": "T",
+    "email": "dep.marceloaro@camara.leg.br",
+    "partido": "PHS",
+    "cpf": "06305588686"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcelobelinati@camara.leg.br",
+    "partido": "PP",
+    "cpf": "87120313991"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcelocastro@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "02382091304"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcelomatos@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "90838920772"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcelosquassoni@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "08363754838"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcioalvino@camara.leg.br",
+    "partido": "PR",
+    "cpf": "10115711880"
+  },
+  {
+    "status": "T",
+    "email": "dep.marciomarinho@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "01895263786"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcomaia@camara.leg.br",
+    "partido": "PT",
+    "cpf": "47500867034"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcotebaldi@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "25671235049"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcon@camara.leg.br",
+    "partido": "PT",
+    "cpf": "43434339000"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcosabrao@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "52036790100"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcosmontes@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "19152922634"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcosreategui@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "10744096200"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcosrogerio@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "60232064253"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcosrotta@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "49274350910"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcossoares@camara.leg.br",
+    "partido": "PR",
+    "cpf": "05217856777"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcuspestana@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "38194350697"
+  },
+  {
+    "status": "T",
+    "email": "dep.marcusvicente@camara.leg.br",
+    "partido": "PP",
+    "cpf": "31693113791"
+  },
+  {
+    "status": "T",
+    "email": "dep.margaridasalomao@camara.leg.br",
+    "partido": "PT",
+    "cpf": "13521039668"
+  },
+  {
+    "status": "T",
+    "email": "dep.mariadorosario@camara.leg.br",
+    "partido": "PT",
+    "cpf": "48989371015"
+  },
+  {
+    "status": "T",
+    "email": "dep.mariahelena@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "11251778291"
+  },
+  {
+    "status": "T",
+    "email": "dep.marianacarvalho@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "83577572272"
+  },
+  {
+    "status": "T",
+    "email": "dep.marinaldorosendo@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "40806022434"
+  },
+  {
+    "status": "T",
+    "email": "dep.marinharaupp@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "03279216842"
+  },
+  {
+    "status": "T",
+    "email": "dep.marioheringer@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "28539249634"
+  },
+  {
+    "status": "T",
+    "email": "dep.marionegromontejr@camara.leg.br",
+    "partido": "PP",
+    "cpf": "00031226540"
+  },
+  {
+    "status": "S",
+    "email": "dep.marquinhomendes@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "50395653720"
+  },
+  {
+    "status": "T",
+    "email": "dep.marxbeltrao@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "02696564485"
+  },
+  {
+    "status": "T",
+    "email": "dep.mauricioquintellalessa@camara.leg.br",
+    "partido": "PR",
+    "cpf": "80355633434"
+  },
+  {
+    "status": "T",
+    "email": "dep.maurolopes@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "10901906620"
+  },
+  {
+    "status": "T",
+    "email": "dep.mauromariani@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "48520500900"
+  },
+  {
+    "status": "S",
+    "email": "dep.mauropereira@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "92626050806"
+  },
+  {
+    "status": "T",
+    "email": "dep.maxfilho@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "98941917700"
+  },
+  {
+    "status": "T",
+    "email": "dep.mendoncafilho@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "40530086468"
+  },
+  {
+    "status": "T",
+    "email": "dep.miguelhaddad@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "96476850849"
+  },
+  {
+    "status": "T",
+    "email": "dep.miguellombardi@camara.leg.br",
+    "partido": "PR",
+    "cpf": "05209979806"
+  },
+  {
+    "status": "T",
+    "email": "dep.miltonmonti@camara.leg.br",
+    "partido": "PR",
+    "cpf": "02980372897"
+  },
+  {
+    "status": "T",
+    "email": "dep.miroteixeira@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "03690288720"
+  },
+  {
+    "status": "T",
+    "email": "dep.misaelvarella@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "28492803649"
+  },
+  {
+    "status": "T",
+    "email": "dep.missionariojoseolimpio@camara.leg.br",
+    "partido": "PP",
+    "cpf": "79507646868"
+  },
+  {
+    "status": "T",
+    "email": "dep.moemagramacho@camara.leg.br",
+    "partido": "PT",
+    "cpf": "13339982520"
+  },
+  {
+    "status": "T",
+    "email": "dep.moronitorgan@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "33396671015"
+  },
+  {
+    "status": "T",
+    "email": "dep.mosesrodrigues@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "47721740363"
+  },
+  {
+    "status": "T",
+    "email": "dep.nelsonmarchezanjunior@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "64777154068"
+  },
+  {
+    "status": "T",
+    "email": "dep.nelsonmarquezelli@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "01601849834"
+  },
+  {
+    "status": "T",
+    "email": "dep.nelsonmeurer@camara.leg.br",
+    "partido": "PP",
+    "cpf": "00564834904"
+  },
+  {
+    "status": "T",
+    "email": "dep.newtoncardosojr@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "01266637699"
+  },
+  {
+    "status": "T",
+    "email": "dep.nilsonleitao@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "34577521172"
+  },
+  {
+    "status": "T",
+    "email": "dep.nilsonpinto@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "02875900200"
+  },
+  {
+    "status": "T",
+    "email": "dep.niltotatto@camara.leg.br",
+    "partido": "PT",
+    "cpf": "03380916889"
+  },
+  {
+    "status": "T",
+    "email": "dep.niltoncapixaba@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "57785368791"
+  },
+  {
+    "status": "T",
+    "email": "dep.odelmoleao@camara.leg.br",
+    "partido": "PP",
+    "cpf": "08033358653"
+  },
+  {
+    "status": "T",
+    "email": "dep.odoricomonteiro@camara.leg.br",
+    "partido": "PT",
+    "cpf": "19249330391"
+  },
+  {
+    "status": "T",
+    "email": "dep.onyxlorenzoni@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "21025932072"
+  },
+  {
+    "status": "T",
+    "email": "dep.orlandosilva@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "56524455568"
+  },
+  {
+    "status": "T",
+    "email": "dep.osmarserraglio@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "01773852949"
+  },
+  {
+    "status": "T",
+    "email": "dep.osmarterra@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "19971478072"
+  },
+  {
+    "status": "T",
+    "email": "dep.otavioleite@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "20163452504"
+  },
+  {
+    "status": "T",
+    "email": "dep.padrejoao@camara.leg.br",
+    "partido": "PT",
+    "cpf": "72425610600"
+  },
+  {
+    "status": "T",
+    "email": "dep.paeslandim@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "00309745187"
+  },
+  {
+    "status": "T",
+    "email": "dep.pastoreurico@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "23340541434"
+  },
+  {
+    "status": "T",
+    "email": "dep.pastorfranklin@camara.leg.br",
+    "partido": "PTdoB",
+    "cpf": "74301225404"
+  },
+  {
+    "status": "T",
+    "email": "dep.pauderneyavelino@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "03465268253"
+  },
+  {
+    "status": "T",
+    "email": "dep.paulao@camara.leg.br",
+    "partido": "PT",
+    "cpf": "14433290459"
+  },
+  {
+    "status": "T",
+    "email": "dep.pauloabiackel@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "30825628172"
+  },
+  {
+    "status": "T",
+    "email": "dep.pauloazi@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "28870646572"
+  },
+  {
+    "status": "T",
+    "email": "dep.paulofeijo@camara.leg.br",
+    "partido": "PR",
+    "cpf": "52118037791"
+  },
+  {
+    "status": "T",
+    "email": "dep.paulofoletto@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "47909463715"
+  },
+  {
+    "status": "T",
+    "email": "dep.paulofreire@camara.leg.br",
+    "partido": "PR",
+    "cpf": "93876912849"
+  },
+  {
+    "status": "T",
+    "email": "dep.paulomagalhaes@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "06015530553"
+  },
+  {
+    "status": "T",
+    "email": "dep.paulomaluf@camara.leg.br",
+    "partido": "PP",
+    "cpf": "00768782872"
+  },
+  {
+    "status": "T",
+    "email": "dep.paulopereiradasilva@camara.leg.br",
+    "partido": "SD",
+    "cpf": "21006768904"
+  },
+  {
+    "status": "T",
+    "email": "dep.paulopimenta@camara.leg.br",
+    "partido": "PT",
+    "cpf": "42844924034"
+  },
+  {
+    "status": "T",
+    "email": "dep.pauloteixeira@camara.leg.br",
+    "partido": "PT",
+    "cpf": "02441369806"
+  },
+  {
+    "status": "T",
+    "email": "dep.pedrochaves@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "16692454115"
+  },
+  {
+    "status": "T",
+    "email": "dep.pedrocunhalima@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "08430005463"
+  },
+  {
+    "status": "T",
+    "email": "dep.pedrofernandes@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "06235760310"
+  },
+  {
+    "status": "T",
+    "email": "dep.pedrouczai@camara.leg.br",
+    "partido": "PT",
+    "cpf": "47721855934"
+  },
+  {
+    "status": "T",
+    "email": "dep.pedrovilela@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "01055737448"
+  },
+  {
+    "status": "S",
+    "email": "dep.penna@camara.leg.br",
+    "partido": "PV",
+    "cpf": "50192400878"
+  },
+  {
+    "status": "T",
+    "email": "dep.pompeodemattos@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "28346890087"
+  },
+  {
+    "status": "T",
+    "email": "dep.pr.marcofeliciano@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "13117532811"
+  },
+  {
+    "status": "T",
+    "email": "dep.professorvictoriogalli@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "25755773149"
+  },
+  {
+    "status": "T",
+    "email": "dep.professoradorinhaseabrarezende@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "43196926168"
+  },
+  {
+    "status": "T",
+    "email": "dep.professoramarcivania@camara.leg.br",
+    "partido": "PT",
+    "cpf": "32770553291"
+  },
+  {
+    "status": "T",
+    "email": "dep.rafaelmotta@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "05582056408"
+  },
+  {
+    "status": "T",
+    "email": "dep.raimundogomesdematos@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "06163238320"
+  },
+  {
+    "status": "T",
+    "email": "dep.raquelmuniz@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "48557714653"
+  },
+  {
+    "status": "S",
+    "email": "dep.rauljungmann@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "24444928468"
+  },
+  {
+    "status": "T",
+    "email": "dep.reginaldolopes@camara.leg.br",
+    "partido": "PT",
+    "cpf": "90330862634"
+  },
+  {
+    "status": "T",
+    "email": "dep.remidiomonai@camara.leg.br",
+    "partido": "PR",
+    "cpf": "28624114268"
+  },
+  {
+    "status": "T",
+    "email": "dep.renataabreu@camara.leg.br",
+    "partido": "PTN",
+    "cpf": "30669688800"
+  },
+  {
+    "status": "T",
+    "email": "dep.renatomolling@camara.leg.br",
+    "partido": "PP",
+    "cpf": "32091206091"
+  },
+  {
+    "status": "T",
+    "email": "dep.renzobraz@camara.leg.br",
+    "partido": "PP",
+    "cpf": "04524796657"
+  },
+  {
+    "status": "T",
+    "email": "dep.ricardobarros@camara.leg.br",
+    "partido": "PP",
+    "cpf": "42478979934"
+  },
+  {
+    "status": "T",
+    "email": "dep.ricardoizar@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "10553705873"
+  },
+  {
+    "status": "T",
+    "email": "dep.ricardoteobaldo@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "47329980463"
+  },
+  {
+    "status": "T",
+    "email": "dep.ricardotripoli@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "47796278853"
+  },
+  {
+    "status": "T",
+    "email": "dep.robertoalves@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "02621206824"
+  },
+  {
+    "status": "T",
+    "email": "dep.robertobalestra@camara.leg.br",
+    "partido": "PP",
+    "cpf": "01611500125"
+  },
+  {
+    "status": "T",
+    "email": "dep.robertobritto@camara.leg.br",
+    "partido": "PP",
+    "cpf": "11257741500"
+  },
+  {
+    "status": "S",
+    "email": "dep.robertofreire@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "00235369420"
+  },
+  {
+    "status": "T",
+    "email": "dep.robertogoes@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "26404222272"
+  },
+  {
+    "status": "T",
+    "email": "dep.robertosales@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "07977098784"
+  },
+  {
+    "status": "T",
+    "email": "dep.rocha@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "30790590263"
+  },
+  {
+    "status": "T",
+    "email": "dep.rodrigodecastro@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "83035605653"
+  },
+  {
+    "status": "T",
+    "email": "dep.rodrigomaia@camara.leg.br",
+    "partido": "DEM",
+    "cpf": "00590048783"
+  },
+  {
+    "status": "T",
+    "email": "dep.rodrigomartins@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "87856450363"
+  },
+  {
+    "status": "T",
+    "email": "dep.rodrigopacheco@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "00445689676"
+  },
+  {
+    "status": "T",
+    "email": "dep.rogeriomarinho@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "41301129453"
+  },
+  {
+    "status": "T",
+    "email": "dep.rogeriopeninhamendonca@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "16513703034"
+  },
+  {
+    "status": "T",
+    "email": "dep.rogeriorosso@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "50567780104"
+  },
+  {
+    "status": "T",
+    "email": "dep.romulogouveia@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "42787262449"
+  },
+  {
+    "status": "T",
+    "email": "dep.ronaldobenedet@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "28920910987"
+  },
+  {
+    "status": "T",
+    "email": "dep.ronaldocarletto@camara.leg.br",
+    "partido": "PP",
+    "cpf": "56041896772"
+  },
+  {
+    "status": "T",
+    "email": "dep.ronaldofonseca@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "07732454804"
+  },
+  {
+    "status": "T",
+    "email": "dep.ronaldolessa@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "02621380425"
+  },
+  {
+    "status": "T",
+    "email": "dep.ronaldomartins@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "63360403304"
+  },
+  {
+    "status": "T",
+    "email": "dep.ronaldonogueira@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "43529402087"
+  },
+  {
+    "status": "T",
+    "email": "dep.roneynemer@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "31763111172"
+  },
+  {
+    "status": "T",
+    "email": "dep.rosangelagomes@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "82863989715"
+  },
+  {
+    "status": "T",
+    "email": "dep.rossoni@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "21471037991"
+  },
+  {
+    "status": "T",
+    "email": "dep.rubensbueno@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "18746420959"
+  },
+  {
+    "status": "T",
+    "email": "dep.rubensotoni@camara.leg.br",
+    "partido": "PT",
+    "cpf": "13334727149"
+  },
+  {
+    "status": "T",
+    "email": "dep.rubenspereirajunior@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "00441514383"
+  },
+  {
+    "status": "T",
+    "email": "dep.saguasmoraes@camara.leg.br",
+    "partido": "PT",
+    "cpf": "28638115172"
+  },
+  {
+    "status": "T",
+    "email": "dep.samuelmoreira@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "06613343846"
+  },
+  {
+    "status": "S",
+    "email": "dep.sandesjunior@camara.leg.br",
+    "partido": "PP",
+    "cpf": "19681550153"
+  },
+  {
+    "status": "T",
+    "email": "dep.sandroalex@camara.leg.br",
+    "partido": "PPS",
+    "cpf": "77535405991"
+  },
+  {
+    "status": "T",
+    "email": "dep.saraivafelipe@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "27018938600"
+  },
+  {
+    "status": "T",
+    "email": "dep.sarneyfilho@camara.leg.br",
+    "partido": "PV",
+    "cpf": "14737418315"
+  },
+  {
+    "status": "T",
+    "email": "dep.sergiobrito@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "18635458591"
+  },
+  {
+    "status": "T",
+    "email": "dep.sergiomoraes@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "20504225049"
+  },
+  {
+    "status": "T",
+    "email": "dep.sergioreis@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "06976140859"
+  },
+  {
+    "status": "T",
+    "email": "dep.sergiosouza@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "75687658904"
+  },
+  {
+    "status": "T",
+    "email": "dep.sergiovidigal@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "52549810759"
+  },
+  {
+    "status": "T",
+    "email": "dep.sergiozveiter@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "51813440700"
+  },
+  {
+    "status": "T",
+    "email": "dep.sheridan@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "75096102220"
+  },
+  {
+    "status": "T",
+    "email": "dep.sibamachado@camara.leg.br",
+    "partido": "PT",
+    "cpf": "13365517391"
+  },
+  {
+    "status": "S",
+    "email": "dep.silasbrasileiro@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "00469718668"
+  },
+  {
+    "status": "T",
+    "email": "dep.silascamara@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "13512951287"
+  },
+  {
+    "status": "S",
+    "email": "dep.silasfreire@camara.leg.br",
+    "partido": "PR",
+    "cpf": "42057922391"
+  },
+  {
+    "status": "T",
+    "email": "dep.silviocosta@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "10481389415"
+  },
+  {
+    "status": "T",
+    "email": "dep.silviotorres@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "03336123887"
+  },
+  {
+    "status": "T",
+    "email": "dep.simaosessim@camara.leg.br",
+    "partido": "PP",
+    "cpf": "03441067720"
+  },
+  {
+    "status": "T",
+    "email": "dep.simonemorgado@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "22336680220"
+  },
+  {
+    "status": "T",
+    "email": "dep.sorayasantos@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "49125290797"
+  },
+  {
+    "status": "T",
+    "email": "dep.sostenescavalcante@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "95188100606"
+  },
+  {
+    "status": "T",
+    "email": "dep.stefanoaguiar@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "00001608657"
+  },
+  {
+    "status": "T",
+    "email": "dep.subtenentegonzaga@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "41864883634"
+  },
+  {
+    "status": "T",
+    "email": "dep.tadeualencar@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "35284420420"
+  },
+  {
+    "status": "T",
+    "email": "dep.takayama@camara.leg.br",
+    "partido": "PSC",
+    "cpf": "52499383887"
+  },
+  {
+    "status": "T",
+    "email": "dep.tenentelucio@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "46230165600"
+  },
+  {
+    "status": "T",
+    "email": "dep.terezacristina@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "20969430604"
+  },
+  {
+    "status": "T",
+    "email": "dep.tiaeron@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "66858933549"
+  },
+  {
+    "status": "T",
+    "email": "dep.tiririca@camara.leg.br",
+    "partido": "PR",
+    "cpf": "44833881349"
+  },
+  {
+    "status": "T",
+    "email": "dep.toninhopinheiro@camara.leg.br",
+    "partido": "PP",
+    "cpf": "37031074649"
+  },
+  {
+    "status": "T",
+    "email": "dep.toninhowandscheer@camara.leg.br",
+    "partido": "PT",
+    "cpf": "18591035968"
+  },
+  {
+    "status": "T",
+    "email": "dep.ulduricojunior@camara.leg.br",
+    "partido": "PTC",
+    "cpf": "03746803101"
+  },
+  {
+    "status": "T",
+    "email": "dep.valadaresfilho@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "80616291515"
+  },
+  {
+    "status": "T",
+    "email": "dep.valdircolatto@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "16261577900"
+  },
+  {
+    "status": "T",
+    "email": "dep.valmirassuncao@camara.leg.br",
+    "partido": "PT",
+    "cpf": "02333314842"
+  },
+  {
+    "status": "T",
+    "email": "dep.valmirprascidelli@camara.leg.br",
+    "partido": "PT",
+    "cpf": "05194942885"
+  },
+  {
+    "status": "T",
+    "email": "dep.valtenirpereira@camara.leg.br",
+    "partido": "PROS",
+    "cpf": "34358099149"
+  },
+  {
+    "status": "T",
+    "email": "dep.vanderloubet@camara.leg.br",
+    "partido": "PT",
+    "cpf": "32247753191"
+  },
+  {
+    "status": "T",
+    "email": "dep.vanderleimacris@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "19044690868"
+  },
+  {
+    "status": "T",
+    "email": "dep.venezianovitaldorego@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "71346376468"
+  },
+  {
+    "status": "T",
+    "email": "dep.vicentecandido@camara.leg.br",
+    "partido": "PT",
+    "cpf": "11680079840"
+  },
+  {
+    "status": "T",
+    "email": "dep.vicentinho@camara.leg.br",
+    "partido": "PT",
+    "cpf": "12995398404"
+  },
+  {
+    "status": "T",
+    "email": "dep.vicentinhojunior@camara.leg.br",
+    "partido": "PSB",
+    "cpf": "99898659149"
+  },
+  {
+    "status": "T",
+    "email": "dep.victormendes@camara.leg.br",
+    "partido": "PV",
+    "cpf": "80897460391"
+  },
+  {
+    "status": "T",
+    "email": "dep.viniciuscarvalho@camara.leg.br",
+    "partido": "PRB",
+    "cpf": "82286019720"
+  },
+  {
+    "status": "T",
+    "email": "dep.viniciusgurgel@camara.leg.br",
+    "partido": "PR",
+    "cpf": "51004224249"
+  },
+  {
+    "status": "T",
+    "email": "dep.vitorlippi@camara.leg.br",
+    "partido": "PSDB",
+    "cpf": "00168780860"
+  },
+  {
+    "status": "T",
+    "email": "dep.vitorvalim@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "61593052391"
+  },
+  {
+    "status": "S",
+    "email": "dep.wadihdamous@camara.leg.br",
+    "partido": "PT",
+    "cpf": "54812445787"
+  },
+  {
+    "status": "S",
+    "email": "dep.wadsonribeiro@camara.leg.br",
+    "partido": "PCdoB",
+    "cpf": "03333047640"
+  },
+  {
+    "status": "T",
+    "email": "dep.waldenorpereira@camara.leg.br",
+    "partido": "PT",
+    "cpf": "10866655549"
+  },
+  {
+    "status": "T",
+    "email": "dep.waldirmaranhao@camara.leg.br",
+    "partido": "PP",
+    "cpf": "06482902391"
+  },
+  {
+    "status": "S",
+    "email": "dep.walneyrocha@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "58477128715"
+  },
+  {
+    "status": "T",
+    "email": "dep.walteralves@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "03200380411"
+  },
+  {
+    "status": "S",
+    "email": "dep.walterihoshi@camara.leg.br",
+    "partido": "PSD",
+    "cpf": "04688846886"
+  },
+  {
+    "status": "T",
+    "email": "dep.washingtonreis@camara.leg.br",
+    "partido": "PMDB",
+    "cpf": "01311846794"
+  },
+  {
+    "status": "T",
+    "email": "dep.welitonprado@camara.leg.br",
+    "partido": "PT",
+    "cpf": "84719850634"
+  },
+  {
+    "status": "T",
+    "email": "dep.wellingtonroberto@camara.leg.br",
+    "partido": "PR",
+    "cpf": "26254166453"
+  },
+  {
+    "status": "T",
+    "email": "dep.wevertonrocha@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "62929399368"
+  },
+  {
+    "status": "T",
+    "email": "dep.wilsonfilho@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "02147279129"
+  },
+  {
+    "status": "T",
+    "email": "dep.wladimircosta@camara.leg.br",
+    "partido": "SD",
+    "cpf": "13761900287"
+  },
+  {
+    "status": "T",
+    "email": "dep.wolneyqueiroz@camara.leg.br",
+    "partido": "PDT",
+    "cpf": "74989910478"
+  },
+  {
+    "status": "T",
+    "email": "dep.zecarlos@camara.leg.br",
+    "partido": "PT",
+    "cpf": "10009728368"
+  },
+  {
+    "status": "T",
+    "email": "dep.zegeraldo@camara.leg.br",
+    "partido": "PT",
+    "cpf": "17188326215"
+  },
+  {
+    "status": "T",
+    "email": "dep.zesilva@camara.leg.br",
+    "partido": "SD",
+    "cpf": "43422780653"
+  },
+  {
+    "status": "T",
+    "email": "dep.zecacavalcanti@camara.leg.br",
+    "partido": "PTB",
+    "cpf": "49687344415"
+  },
+  {
+    "status": "T",
+    "email": "dep.zecadirceu@camara.leg.br",
+    "partido": "PT",
+    "cpf": "03098871946"
+  },
+  {
+    "status": "T",
+    "email": "dep.zecadopt@camara.leg.br",
+    "partido": "PT",
+    "cpf": "04064992172"
+  },
+  {
+    "status": "T",
+    "email": "dep.zenaidemaia@camara.leg.br",
+    "partido": "PR",
+    "cpf": "12352993415"
+  }
+]

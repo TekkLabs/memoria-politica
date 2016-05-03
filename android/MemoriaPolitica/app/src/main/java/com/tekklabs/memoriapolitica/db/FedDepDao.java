@@ -30,16 +30,16 @@ public class FedDepDao extends PoliticianDao {
         for (int i = 0; i < jArray.length(); i++) {
             JSONObject jsonPol = jArray.getJSONObject(i);
             String cpf = jsonPol.getString(JsonKeys.CPF_KEY);
-            String politicianName = jsonPol.getString(JsonKeys.POLITICIAN_NAME_KEY);
             String partyAcronym = jsonPol.getString(JsonKeys.PARTY_KEY);
             //String status = jsonPol.getString(JsonKeys.STATUS_KEY);
             String email = jsonPol.getString(JsonKeys.EMAIL_KEY);
+            String politicianName = jsonPol.getString(JsonKeys.POLITICIAN_NAME_KEY);
 
             Politician politician = new Politician(cpf);
-            politician.setPoliticianName(politicianName);
             Party party = getPartyByAcronym(partyAcronym);
             politician.setParty(party);
             politician.setEmail(email);
+            politician.setPoliticianName(politicianName);
 
             String fileName = politician.getPoliticianName().toUpperCase();
             fileName = StringUtil.stripAccents(fileName);

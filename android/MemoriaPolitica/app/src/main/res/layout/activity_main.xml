@@ -18,42 +18,78 @@
 
             <!-- The ActionBar -->
             <include layout="@layout/main_toolbar" />
-
             <!-- The Search Toolbar -->
+
             <android.support.v7.widget.Toolbar
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/primary"
-                android:padding="5dp"
                 android:id="@+id/search_toolbar"
-                app:layout_scrollFlags="scroll|enterAlways" >
+                android:paddingLeft="10dp"
+                android:paddingStart="10dp"
+                android:paddingRight="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="4dp"
+                app:layout_scrollFlags="scroll|enterAlways">
 
-                <android.support.v7.widget.SearchView
+                <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:iconifiedByDefault="false"
-                    android:queryHint="@string/search_query_hint"
-                    android:background="@android:color/white" />
+                    android:onClick="onSearchCardCliked"
+                    app:cardElevation="4dp"
+                    app:cardBackgroundColor="@android:color/white">
+
+                    <android.support.v7.widget.SearchView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/main_search_view"
+                        android:queryHint="@string/action_search_politician"
+                        android:iconifiedByDefault="false" />
+                </android.support.v7.widget.CardView>
             </android.support.v7.widget.Toolbar>
 
         </android.support.design.widget.AppBarLayout>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/politician_grid"
-            android:layout_width="match_parent"
+                android:id="@+id/politician_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnWidth="148dp"
+                android:numColumns="auto_fit"
+                android:stretchMode="columnWidth"
+                android:horizontalSpacing="4dip"
+                android:verticalSpacing="4dip"
+                android:gravity="center"
+                android:clipToPadding="true"
+                android:padding="2dp"
+                android:fastScrollEnabled="true"
+                android:fastScrollAlwaysVisible="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:columnWidth="148dp"
-            android:numColumns="auto_fit"
-            android:stretchMode="columnWidth"
-            android:horizontalSpacing="4dip"
-            android:verticalSpacing="4dip"
-            android:gravity="center"
-            android:clipToPadding="true"
-            android:padding="2dp"
-            android:fastScrollEnabled="true"
-            android:fastScrollAlwaysVisible="true"
+            android:orientation="vertical"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            app:layoutManager="android.support.v7.widget.GridLayoutManager"/>
+            xmlns:recyclerviewfastscroller="http://schemas.android.com/apk/res-auto">
+
+            <xyz.danoz.recyclerviewfastscroller.vertical.VerticalRecyclerViewFastScroller
+                android:id="@+id/fast_scroller"
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+            <com.tekklabs.memoriapolitica.gui.politicianlistsection.PoliticianSectionIndicator
+                android:id="@+id/fast_scroller_section_indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/list_item_height"
+                android:layout_toLeftOf="@id/fast_scroller"
+                android:layout_toStartOf="@id/fast_scroller"
+                android:layout_marginRight="-8dp"
+                recyclerviewfastscroller:rfs_backgroundColor="@color/primary"
+                recyclerviewfastscroller:rfs_textColor="@android:color/white" />
+        </RelativeLayout>
 
     </android.support.design.widget.CoordinatorLayout>
 

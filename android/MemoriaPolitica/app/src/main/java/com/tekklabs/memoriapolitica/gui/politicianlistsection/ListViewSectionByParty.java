@@ -58,6 +58,9 @@ public class ListViewSectionByParty implements ListViewSectionIndexer {
 
     @Override
     public int getSectionForPosition(int position) {
+        if (position >= politicians.size()) {
+            position = politicians.size() - 1;
+        }
         PoliticianClassification polClassification = politicians.get(position);
         String party = polClassification.getPolitician().getParty().getAcronym();
 

@@ -39,12 +39,15 @@ public class TseCandidateInfoParser {
                 return;
         }
         else if (command.equals(EXTRACT_TAG)) {
+            System.out.println("Extraindo arquivos...");
             result = extractFiles(args);
         }
         else if (command.equals(MERGE_TAG)) {
+            System.out.println("Fazendo o merge dos arquivos...");
             result = mergeFiles(args);
         }
         else if (command.equals(CSV2JSON_TAG)) {
+            System.out.println("Convertendo em um arquivo JSON");
             result = csv2json(args);
         }
         else {
@@ -54,6 +57,9 @@ public class TseCandidateInfoParser {
 
         if (!result) {
             System.out.println("Operação terminou com erro.");
+        }
+        else {
+            System.out.println("Operação terminou com sucesso.");
         }
     }
 

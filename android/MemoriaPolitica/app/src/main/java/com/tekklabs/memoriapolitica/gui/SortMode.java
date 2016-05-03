@@ -4,7 +4,7 @@ package com.tekklabs.memoriapolitica.gui;
  * Created by taciosd on 4/20/16.
  */
 public enum SortMode {
-    BY_STATE,
+    BY_UF,
     BY_PARTY,
     BY_NAME,
     BY_APPROVED_FIRST,

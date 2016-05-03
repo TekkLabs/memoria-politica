@@ -1,7 +1,7 @@
 package com.tekklabs.senadores;
 
 import com.tekklabs.model.Json2Model;
-import com.tekklabs.model.Politician2Json;
+import com.tekklabs.model.Model2Json;
 import com.tekklabs.model.entities.Candidate;
 import com.tekklabs.model.entities.Senator;
 import com.tekklabs.util.Csv2JsonParser;
@@ -84,7 +84,7 @@ public class SenatorsParser {
             List<Candidate> tseCandList = Json2Model.json2Candidate(tseJson);
 
             associateCpfInSenatorList(senatorList, tseCandList);
-            Politician2Json pol2json = new Politician2Json();
+            Model2Json pol2json = new Model2Json();
             JSONArray senatorJsonArray = pol2json.senatorList2Json(senatorList);
 
             JSONWriter writer = new JSONWriter();
