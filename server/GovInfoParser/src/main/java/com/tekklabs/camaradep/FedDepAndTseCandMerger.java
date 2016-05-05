@@ -67,11 +67,14 @@ public class FedDepAndTseCandMerger {
         }
 
         try {
+            System.out.println("Lendo arquivos de deputados e candidatos...");
             List<FedDep> fedDepList = readFedDepFile(args[1]);
             List<Candidate> tseCandList = readTseCandidateFile(args[2]);
             File outputFile = new File(args[3]);
 
+            System.out.println("Associando deputados...");
             associateCpfInFedDepList(fedDepList, tseCandList);
+            System.out.println("Escrevendo no arquivo de saída...");
             writeFedDepListToFile(outputFile, fedDepList);
         }
         catch (Exception e) {
@@ -102,6 +105,7 @@ public class FedDepAndTseCandMerger {
             else {
                 System.out.println("Encontrado! Nome: " + fedDep.civilName);
             }
+
             fedDep.cpf = cpf;
         }
     }

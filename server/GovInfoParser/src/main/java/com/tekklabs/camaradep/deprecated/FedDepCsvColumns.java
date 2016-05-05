@@ -1,4 +1,4 @@
-package com.tekklabs.camaradep;
+package com.tekklabs.camaradep.deprecated;
 
 import com.tekklabs.model.entities.JsonAttributes;
 import com.tekklabs.util.ConsultaCandColumns;

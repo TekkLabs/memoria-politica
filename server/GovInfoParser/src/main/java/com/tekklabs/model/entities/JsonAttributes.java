@@ -14,4 +14,8 @@ public class JsonAttributes {
     public static final String EMAIL = "email";
     public static final String PHONE = "telefone";
     public static final String FAX = "fax";
+    public static final String SEXO = "sexo";
+    public static final String TELEFONE = "tel";
+    public static final String GABINETE = "gabinete";
+    public static final String ANEXO = "anexo";
 }

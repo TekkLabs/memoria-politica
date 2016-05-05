@@ -39,10 +39,15 @@ public class Model2Json {
     public JSONObject fedDep2Json(FedDep fedDep) {
         JSONObject jObj = new JSONObject();
         jObj.put(JsonAttributes.NOME_POLITICO, fedDep.politicianName);
+        jObj.put(JsonAttributes.NOME_CIVIL, fedDep.civilName);
         jObj.put(JsonAttributes.CPF_CANDIDATO, fedDep.cpf);
-        jObj.put(JsonAttributes.EMAIL, fedDep.email);
+        jObj.put(JsonAttributes.SEXO, fedDep.sex);
         jObj.put(JsonAttributes.STATUS, fedDep.status);
         jObj.put(JsonAttributes.PARTIDO, fedDep.party);
+        jObj.put(JsonAttributes.EMAIL, fedDep.email);
+        jObj.put(JsonAttributes.TELEFONE, fedDep.phone);
+        jObj.put(JsonAttributes.GABINETE, fedDep.office);
+        jObj.put(JsonAttributes.ANEXO, fedDep.annex);
         return jObj;
     }
 

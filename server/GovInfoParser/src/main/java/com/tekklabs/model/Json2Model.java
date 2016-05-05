@@ -75,16 +75,24 @@ public class Json2Model {
         }
 
         String politicianName = (String) jObj.get(JsonAttributes.NOME_POLITICO);
-        String email = (String) jObj.get(JsonAttributes.EMAIL);
+        String sex = (String) jObj.get(JsonAttributes.SEXO);
         String party = (String) jObj.get(JsonAttributes.PARTIDO);
         String status = (String) jObj.get(JsonAttributes.STATUS);
+        String email = (String) jObj.get(JsonAttributes.EMAIL);
+        String phone = (String) jObj.get(JsonAttributes.TELEFONE);
+        String office = (String) jObj.get(JsonAttributes.GABINETE);
+        String annex = (String) jObj.get(JsonAttributes.ANEXO);
 
         FedDep pol = new FedDep();
         pol.civilName = civilName;
         pol.politicianName = politicianName;
-        pol.email = email;
+        pol.sex = sex;
         pol.party = party;
         pol.status = status;
+        pol.email = email;
+        pol.phone = phone;
+        pol.office = office;
+        pol.annex = annex;
 
         return pol;
     }

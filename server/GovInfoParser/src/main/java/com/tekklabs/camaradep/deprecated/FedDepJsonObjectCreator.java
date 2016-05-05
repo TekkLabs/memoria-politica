@@ -1,7 +1,7 @@
-package com.tekklabs.camaradep;
+package com.tekklabs.camaradep.deprecated;
 
+import com.tekklabs.camaradep.deprecated.FedDepCsvColumns;
 import com.tekklabs.model.entities.JsonAttributes;
-import com.tekklabs.util.Csv2JsonParser;
 import com.tekklabs.util.JsonObjectCreator;
 
 import org.json.simple.JSONObject;

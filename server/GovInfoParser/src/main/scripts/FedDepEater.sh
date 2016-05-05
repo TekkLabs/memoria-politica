@@ -8,9 +8,8 @@
 ####            Download do arquivo PDF com as fotos dos deputados.                        ####
 ####		    Extracao das fotos dos deputados.					                       ####
 ####		    Compressão das fotos dos deputados.					                       ####
-####            Download do arquivo XLS com informacões dos deputados.                     ####
-####            Conversão do arquivo XLS em um arquivo XLSX para facilitar a leitura.      ####
-####            Conversão do arquivo XLSX em um arquivo json.                              ####
+####            Download do XML com informacões dos deputados.                             ####
+####            Conversão do XML para o formato json.                                      ####
 ####											                                           ####
 #### Modo de uso:									                                       ####
 ####		./FedDepEater <program_jar> <dir_saida>					                       ####
@@ -61,17 +60,5 @@ rm $photos_file
 rm -r $photos_tmp_dir
 
 
-
 ## Processing Politicians Info
-info_file_name='feddepinfo.xls'
-info_file=$output_dir'/'$info_file_name
-wget -O $info_file 'http://www2.camara.leg.br/deputados/pesquisa/arquivos/arquivo-formato-excel-com-informacoes-dos-deputados-1'
-
-converted_info_file_name=$info_file_name'x'
-converted_info_file=$output_dir'/'$converted_info_file_name
-ssconvert --export-type=Gnumeric_Excel:xlsx $info_file $converted_info_file
-
-java -cp $program_jar com.tekklabs.camaradep.FedDepXlsxConverter --xlsx2json $converted_info_file $output_dir'/feddepinfo.json'
-
-rm $info_file
-rm $converted_info_file
+java -cp $program_jar com.tekklabs.camaradep.ws.FedDepDataEater $output_dir'/feddepinfo.json'
